@@ -1,3 +1,5 @@
+let perguntas = require('readline-sync');
+
 // ============================================================
 //   ATIVIDADE 03 – Input e Output em JavaScript
 // ============================================================
@@ -23,9 +25,13 @@
 
 // → Seu código aqui:
 
-
+/*
+console.log("Iniciando o programa...")
+console.info('Info:A atividade atual é sobre Imput e Output')
+console.warn('Aviso:Sempre iniciar o programa com node e com o nome do arquivo')
+console.error('Error: Não foi possivel executar sua ação')
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Saudação personalizada
@@ -37,9 +43,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
+let nomeUsuario = perguntas.question('Digite seu nome: ');
+let idadeUsuario = perguntas.questionInt('Digite sua idade: ')
 
+console.log(`Olá, ${nomeUsuario}!Voce tem ${idadeUsuario} anos`);
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 3 – Ficha pessoal
@@ -50,9 +60,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
+let ficha = {
+    nome:perguntas.question('Digite seu nome:'),
+    idade:perguntas.question("Digite sua idade:"),
+    cidade:perguntas.question("Digite sua cidade:")
+}
 
+console.table([ficha])
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 4 – Perguntas de sim ou não
@@ -63,9 +80,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
+let gostadedormir = perguntas.keyInYN('Voce gosta de dormir?')
+let gostadeacademia = perguntas.keyInYN('Voce gosta de fazer academia?')
 
+
+console.log(`Você gosta de dormir?: ${gostadedormir ? "gosta" : "não gosta"}`)
+console.log(`Você gosta de fazer academia?: ${gostadeacademia ? "gosta" : "não gosta"}`)
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Lista de favoritos
@@ -76,9 +99,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
+let comida1= perguntas.question("Digite sua primeira comida favorita:")
+let comida2= perguntas.question("Digite sua segunda comida favorita:")
+let comida3= perguntas.question("Digite sua terceira comida favorita:")
+let comidasFavoritas = []
+comidasFavoritas.push(comida1)
+comidasFavoritas.push(comida2)
+comidasFavoritas.push(comida3)
 
+console.table(comidasFavoritas)
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Apresentação completa
@@ -90,10 +122,17 @@ console.log("_______________________________");
 // d) Exiba a mesma informação com console.table().
 
 // → Seu código aqui:
+/*
+let cadastroPessoal = {
+    nome:perguntas.question('Digite seu nome:'),
+    profissao:perguntas.question("Digite sua profissao:"),
+    cidade:perguntas.question("Digite sua cidade:")
+}
 
-
+console.log(`Me chamo ${cadastroPessoal.nome}.Profissão: ${cadastroPessoal.profissao} e moro na cidade de ${cadastroPessoal.cidade}`);
+console.table([cadastroPessoal])
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Lista de objetos
@@ -109,28 +148,89 @@ console.log("_______________________________");
 // g) Exiba somente o nome e a rua do 1º usuário.
 
 // → Seu código aqui:
+/*
+const usuário1 = {
+    nome: perguntas.question('Digite seu nome:'),
+    idade: perguntas.question('Digite sua idade:'),
+    endereco: {
+        cidade:"Jaragua",
+        rua: "Valdir Kaiser",
+        numero: 89
+    }
+}
+const usuário2 = {
+    nome: perguntas.question('Digite seu nome:'),
+    idade: perguntas.question('Digite sua idade:'),
+    endereco: {
+        cidade:"Jaragua",
+        rua: "Dona Lidia",
+        numero: 100
+    }
+}
+const usuário3 = {
+    nome: perguntas.question('Digite seu nome:'),
+    idade: perguntas.question('Digite sua idade:'),
+    endereco: {
+        cidade:"Jaragua",
+        rua: "Jose Teodoro Ribeiro",
+        numero: 250
+    }
+}
+let listaDeUsuarios = [usuário1,usuário2,usuário3]
 
 
+console.log(listaDeUsuarios[1].nome, listaDeUsuarios[1].idade)
+console.log(listaDeUsuarios[2].endereco)
+console.log(listaDeUsuarios[0].nome)
+console.log(listaDeUsuarios[0].endereco.rua)
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Ranking de notas
 // ------------------------------------------------------------
 // a) Peça ao usuário o nome de 3 alunos e suas três notas, um por vez.
 // b) Armazene cada aluno como um objeto com as propriedades 'nome' e 'notas'.
-// c) notas deve ser uma lista.
-// d) Guarde os 3 objetos em um array chamado 'turma'.
-// e) Exiba o array 'turma' com console.table().
-// f) Exiba o nome e a 1ª nota do 2º aluno.
-// g) Exiba o nome e a 2ª nota do 3º aluno.
-// h) Exiba o nome e a 3ª nota do 1º aluno.
+// c) Guarde os 3 objetos em um array chamado 'turma'.
+// d) Exiba o array 'turma' com console.table().
+// e) Exiba o nome e a 1ª nota do 2º aluno.
+// f) Exiba o nome e a 2ª nota do 3º aluno.
+// g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
 
+/*
+const aluno1 = {
+    nome: perguntas.question('Digite seu nome:'),
+    notas: {
+        PrimeiraNota: 4.5,
+        SegundaNota: 8,
+        TerceiraNota: 10
+        }
+    }
+const aluno2 = {
+    nome: perguntas.question('Digite seu nome:'),
+    notas: {
+        PrimeiraNota: 4.5,
+        SegundaNota: 8,
+        TerceiraNota: 10
+        }
+    }
+const aluno3 = {
+    nome: perguntas.question('Digite seu nome:'),
+    notas: perguntas.questionInt('primeita nota:');
+    perguntas.questionInt('segunda nota:'); 
+    perguntas.questionInt('terceira nota:')
+    }
+    }
+let turma = [aluno1,aluno2,aluno3]
 
+console.table([turma])
+console.log(turma[1].nome,turma[1].notas.PrimeiraNota)
+console.log(turma[2].nome,turma[2].notas.SegundaNota)
+console.log(turma[0].nome,turma[0].notas.TerceiraNota)
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Cadastro de produto
