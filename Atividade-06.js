@@ -1,3 +1,5 @@
+let perguntas = require('readline-sync');
+
 // ============================================================
 //   ATIVIDADE 06 – Operadores Lógicos em JavaScript
 // ============================================================
@@ -28,8 +30,16 @@
 
 // → Seu código aqui:
 
+// let trueandtrue = true && true
+// let trueandfalse = true && false
+// let falseandtrue = false && true
+// let falseandfalse = false && false
 
-console.log("_______________________________");
+// console.log(`true && true: ${trueandtrue}`)
+// console.log(`true && false: ${trueandfalse}`)
+// console.log(`false && true: ${falseandtrue}`)
+// console.log(`false && false: ${falseandfalse}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -47,8 +57,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let trueandtrue = true || true
+// let trueandfalse = true || false
+// let falseandtrue = false || true
+// let falseandfalse = false || false
 
-console.log("_______________________________");
+// console.log(`true || true: ${trueandtrue}`)
+// console.log(`true || false: ${trueandfalse}`)
+// console.log(`false || true: ${falseandtrue}`)
+// console.log(`false || false: ${falseandfalse}`)
+// console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -62,8 +81,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let sistemaAtivo = true
+// let modoManutencao = !sistemaAtivo
+// let lugarVago = false
+// let lugarOcupado = !lugarVago
 
-console.log("_______________________________");
+// console.log(`O sistema esta ativo? : ${sistemaAtivo ? "Sim" : "Não"}`)
+// console.log(`O sistema esta inativo? : ${modoManutencao? "Sim" : "Não"}`)
+// console.log(`O lugar esta vago? : ${lugarVago? "Sim" : "Não"}`)
+// console.log(`O lugar esta ocupado? : ${lugarOcupado? "Sim" : "Não"}`)
+// console.log("_______________________________")
 
 
 // ------------------------------------------------------------
@@ -78,7 +105,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let peso = perguntas.questionInt('Digite o seu peso: ')
+let altura = perguntas.questionFloat('Digite sua altura: ')
+let imc = peso / (altura ** 2)
 
+const usuario = {
+    peso: peso,
+    altura: altura,
+    imc: imc,
+}
+
+let imcAbaixoDoPeso = imc >= 18.5 && imc <= 24.9
+let imcNormal = imc >= 25 && imc <= 29.9
+let imcAcimaDoPeso = imc >= 25 && imc <= 29.9
+
+
+console.log(`IMC: ${usuario.imc}`);
+console.log(`Abaixo do peso: ${imcAbaixoDoPeso}`);
+console.log(`Peso normal: ${imcNormal}`);
+console.log(`Acima do peso: ${imcAcimaDoPeso}`);
 console.log("_______________________________");
 
 

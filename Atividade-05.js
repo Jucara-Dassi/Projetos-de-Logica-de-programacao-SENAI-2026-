@@ -1,3 +1,4 @@
+let perguntas = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 05 – Operadores Relacionais em JavaScript
 // ============================================================
@@ -132,7 +133,7 @@ console.log(`Salário A (R$ ${salarioA}) >= Salário B (R$ ${salarioB}):  ${sala
 console.log(`Salário A (R$ ${salarioA}) <= Salário B (R$ ${salarioB}):  ${salarioA <= salarioB ? "sim" : "nao"} `)
 console.log(`Salário A (R$ ${salarioA}) === Salário B (R$ ${salarioB}):  ${salarioA === salarioB ? "sim" : "nao"} `)
 console.log("_______________________________");
-*/
+/*
 
 // ------------------------------------------------------------
 // EXERCÍCIO 4 – Armazenando resultados em variáveis
@@ -174,18 +175,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
 let num1 = perguntas.questionInt('Digite o primeiro numero: '); 
 let num2 = perguntas.questionInt('Digite o segundo numero: ')
-
-
+console.log(`o numero ${num1} é maior que ${num2}? : ${num1 > num2? "sim" : "nao"}`)
+console.log(`o numero ${num2} é maior que ${num1}? : ${num1 < num2? "sim" : "nao"}`)
+console.log(`o numero ${num1} é igual a ${num2}? : ${num1 === num2? "sim" : "nao"}`)
+console.log(`o numero ${num1} é maior ou igual que ${num2}? : ${num1 >= num2? "sim" : "nao"}`)
 console.log("_______________________________");
-
-/*
-let a = num1 > num2
-let b = num1 < num2
-let c = num1 === num2
-let d = num1 >= num2
 */
+
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Verificação de preço
 // ------------------------------------------------------------
@@ -200,9 +199,17 @@ let d = num1 >= num2
 
 // → Seu código aqui:
 
+/*
+let preco = perguntas.questionInt('Preco do produto: ')
+const precoMaximo = 100
+let estaDentroDoOrcamento = preco <= precoMaximo
+let esteItemEhCaro = preco > precoMaximo
 
+console.log(`Preço informado: R$ ${preco}`)
+console.log(`Dentro do orçamento de R$ ${precoMaximo}? : ${estaDentroDoOrcamento ? "Sim" : "Não"}`)
+console.log(`O item é mais caro? Superior a R$ ${precoMaximo}? : ${esteItemEhCaro ? "Sim" : "Não"}`)
 console.log("_______________________________");
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Comparando idade
@@ -218,7 +225,6 @@ console.log("_______________________________");
 // d) Similar ao exemplo acima, verifique e exiba qual pessoa é mais velha.
 
 // → Seu código aqui:
-
 
 console.log("_______________________________");
 

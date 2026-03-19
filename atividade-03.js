@@ -61,11 +61,7 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 /*
-let ficha = {
-    nome:perguntas.question('Digite seu nome:'),
-    idade:perguntas.question("Digite sua idade:"),
-    cidade:perguntas.question("Digite sua cidade:")
-}
+c
 
 console.table([ficha])
 console.log("_______________________________");
