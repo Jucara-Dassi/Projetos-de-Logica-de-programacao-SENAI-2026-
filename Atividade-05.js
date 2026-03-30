@@ -199,17 +199,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-/*
-let preco = perguntas.questionInt('Preco do produto: ')
-const precoMaximo = 100
-let estaDentroDoOrcamento = preco <= precoMaximo
-let esteItemEhCaro = preco > precoMaximo
 
-console.log(`Preço informado: R$ ${preco}`)
-console.log(`Dentro do orçamento de R$ ${precoMaximo}? : ${estaDentroDoOrcamento ? "Sim" : "Não"}`)
-console.log(`O item é mais caro? Superior a R$ ${precoMaximo}? : ${esteItemEhCaro ? "Sim" : "Não"}`)
-console.log("_______________________________");
-*/
+// let preco = perguntas.questionInt('Preco do produto: ')
+// const precoMaximo = 100
+// let estaDentroDoOrcamento = preco <= precoMaximo
+// let esteItemEhCaro = preco > precoMaximo
+
+// console.log(`Preço informado: R$ ${preco}`)
+// console.log(`Dentro do orçamento de R$ ${precoMaximo}? : ${estaDentroDoOrcamento ? "Sim" : "Não"}`)
+// console.log(`O item é mais caro? Superior a R$ ${precoMaximo}? : ${esteItemEhCaro ? "Sim" : "Não"}`)
+// console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Comparando idade
@@ -226,6 +226,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let usuario1 = {
+    nome:perguntas.question('Digite seu nome:'),
+}
+
+
+let cadastro = [usuario1, usuario2]
+
+
+console.log(`Idade da ${usuario1.idade} é <idadePessoa1> e ela é ${idadePessoa1 >= 18 ? "maior de idade" : "menor de idade"}.`)
 console.log("_______________________________");
 
 

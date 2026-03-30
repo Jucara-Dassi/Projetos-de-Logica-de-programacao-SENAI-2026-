@@ -105,26 +105,26 @@ let perguntas = require('readline-sync');
 
 // → Seu código aqui:
 
-let peso = perguntas.questionInt('Digite o seu peso: ')
-let altura = perguntas.questionFloat('Digite sua altura: ')
-let imc = peso / (altura ** 2)
+// let peso = perguntas.questionInt('Digite o seu peso: ')
+// let altura = perguntas.questionFloat('Digite sua altura: ')
+// let imc = peso / (altura ** 2)
 
-const usuario = {
-    peso: peso,
-    altura: altura,
-    imc: imc,
-}
+// const usuario = {
+//     peso: peso,
+//     altura: altura,
+//     imc: imc,
+// }
 
-let imcAbaixoDoPeso = imc >= 18.5 && imc <= 24.9
-let imcNormal = imc >= 25 && imc <= 29.9
-let imcAcimaDoPeso = imc >= 25 && imc <= 29.9
+// let imcAbaixoDoPeso = imc >= 18.5 && imc <= 24.9
+// let imcNormal = imc >= 25 && imc <= 29.9
+// let imcAcimaDoPeso = imc >= 25 && imc <= 29.9
 
 
-console.log(`IMC: ${usuario.imc}`);
-console.log(`Abaixo do peso: ${imcAbaixoDoPeso}`);
-console.log(`Peso normal: ${imcNormal}`);
-console.log(`Acima do peso: ${imcAcimaDoPeso}`);
-console.log("_______________________________");
+// console.log(`IMC: ${usuario.imc}`);
+// console.log(`Abaixo do peso: ${imcAbaixoDoPeso}`);
+// console.log(`Peso normal: ${imcNormal}`);
+// console.log(`Acima do peso: ${imcAcimaDoPeso}`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -141,8 +141,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let notaFinal = 4.8
 
-console.log("_______________________________");
+// let precisaRecuperacao = notaFinal >= 4 && notaFinal < 6
+// let reprovado = !notaFinal < 4
+// let precisaDeAjuda = precisaRecuperacao || reprovado
+
+// console.log(`A nota final foi ${notaFinal}`)
+// console.log(`Precisa de recuperação? ${precisaRecuperacao ? "Sim, precisa" : "Não, não é necessário"}`)
+// console.log(`Precisa de ajuda? ${precisaDeAjuda ? "Sim, precisa" : "Não, não é necessário"}`)
+// console.log(`Foi reprovado? ${reprovado ? "Sim, o aluno foi reprovado" : "Não, o aluno não foi reprovado"}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -156,8 +165,11 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let temperatura = 38.2
+// let diagnostico = temperatura >= 37.6 ? "Febre detectada" : "Temperatura normal"
 
-console.log("_______________________________");
+// console.log(`A temperatura esta em ${temperatura}°C e o diagnostico é ${diagnostico}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -171,8 +183,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let velocidade = 110
+// let limiteVelocidade = 100
 
-console.log("_______________________________");
+// let statusMulta = velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade regular"
+
+// console.log(`A velocidade foi de ${velocidade}km/h e teve ${statusMulta}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -187,8 +204,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let ehEstudante = perguntas.keyInYN('É bolsista? ')
+// let pagamaisquemil = perguntas.keyInYN('Paga mais de 1000,00 mensais pelo curso? ')
+// let mensagem = ehEstudante && pagamaisquemil ? "Desconto aplicado!" : "Desconto não aplicado"
 
-console.log("_______________________________");
+// console.log(`${mensagem}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -210,7 +231,21 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-console.log("_______________________________");
+// let usuario = {
+//     idade: perguntas.questionInt('Qual a sua idade? '),
+//     possuiIngresso: perguntas.keyInYN('Possui ingresso? '),
+//     ehAssociado: perguntas.keyInYN('É associado ao clube? ')
+// }
+
+// let verificacao = {
+//     podeEntrarnormal: usuario.idade >= 18 && usuario.possuiIngresso,
+//     podeEntrarSocio: usuario.possuiIngresso && usuario.ehAssociado,
+//     precisaAcompanhante: usuario.idade < 18,
+//     naoPodeEntrar: usuario.possuiIngresso === false && usuario.ehAssociado === false
+// }
+
+// console.log(verificacao.podeEntrarnormal  && verificacao.podeEntrarSocio? "Entrada liberada!" : "Entrada negada.")
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -229,8 +264,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let produto = {
+//     nome: perguntas.question('Qual o nome do produto? '),
+//     quantidade: perguntas.questionInt('Qual a quantidade em estoque? '),
+//     status: perguntas.keyInYN('Esta ativo? ')
+// }
 
-console.log("_______________________________");
+// let temestoque = produto.quantidade > 0
+// let produtoDisponivel = produto.quantidade > 0 && produto.status === true
+// let produtoIndisponivel = !produto.quantidade || !produto.status
+
+
+// console.log(temestoque)
+// console.log(produtoDisponivel)
+// console.log(produtoIndisponivel)
+// console.log(`O nome do produto é ${produto.nome}, o mesmo tem ${produto.quantidade} quantidades e ${produto.status ? "Esta ativo" : "Não esta ativo"}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -249,8 +298,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let ehAdmin = perguntas.keyInYN('É administrador? ')
+// let logado = perguntas.keyInYN('Esta logado? ')
+// let contaAtiva = perguntas.keyInYN('Conta ativa? ')
 
-console.log("_______________________________");
+// let acessoSistema = logado && contaAtiva
+// let acessoAdmin = acessoSistema && ehAdmin
+// let acessoNegado = acessoSistema && acessoAdmin
+
+
+// console.log(acessoNegado? "Login efetuado com sucesso!" : "Acesso negado")
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -272,5 +330,20 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let credenciaisSistema = {
+//     usuario: "admin",
+//     senha: 1234
+// }
 
-console.log("_______________________________");
+// let usuarioDigitado =  perguntas.question('Digite seu login: ')
+// let senhaDigitada = perguntas.questionInt('Digite sua senha: ')
+
+
+// let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario
+// let senhaCorreta = senhaDigitada === credenciaisSistema.senha
+// let loginValido = usuarioCorreto && senhaCorreta
+
+// let mensagem = loginValido? "Desconto aplicado!" : "Desconto não aplicado"
+
+// console.log(mensagem)
+// console.log("_______________________________");
