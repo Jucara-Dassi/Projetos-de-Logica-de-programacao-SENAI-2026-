@@ -61,7 +61,6 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 /*
-c
 
 console.table([ficha])
 console.log("_______________________________");
@@ -245,8 +244,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let produto = {
+//     nome: perguntas.question("Nome do produto: "),
+//     categoria: perguntas.question("Categoria do produto: "),
+//     preco: perguntas.questionFloat("Preco do produto: "),
+//     quantidade: perguntas.questionInt("Quantidade em estoque: "),
+//     disponivel: perguntas.keyInYN("Produto esta disponivel ara venda? : y)Sim : n)Nao"),
+// }
 
-console.log("_______________________________");
+// console.table(produto)
+// console.log(`Produto: ${produto.nome}| Categoria: ${produto.categoria} | Estoque: ${produto.quantidade} un`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -260,3 +268,22 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+
+let medicamento1 = {
+    nome: perguntas.question("Nome do medicamento: "),
+    preco: perguntas.questionFloat("Preco do produto: "),
+    emEstoque: perguntas.keyInYN("Produto em estoque? : y)Sim : n)Nao"),
+}
+
+let medicamento2 = {
+    nome: perguntas.question("Nome do medicamento: "),
+    preco: perguntas.questionFloat("Preco do produto: "),
+    emEstoque: perguntas.keyInYN("Produto em estoque? : y)Sim : n)Nao"),
+}
+
+
+let estoquefarmacia = []
+estoquefarmacia.push(medicamento1)
+estoquefarmacia.push(medicamento2)
+
+console.table(estoquefarmacia)

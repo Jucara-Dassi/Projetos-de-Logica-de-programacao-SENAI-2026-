@@ -1,3 +1,5 @@
+let perguntas = require('readline-sync');
+
 // ============================================================
 //   ATIVIDADE 08 – Estruturas de Controle (Switch / Case)
 // ============================================================
@@ -16,43 +18,38 @@
 
 // → Seu código aqui:
 
-let planeta = 3
+// // let planeta = 3
 
-switch (planeta) {
-    case 1:
-        console.log("Mercurio");
-        break;
-    case 2:
-        console.log("Venus");
-        break;
-    case 3: 
-        console.log("Terra");
-        break;
-    case 4:
-        console.log("Marte");
-        break;
-    case 5:
-        console.log("Jupiter");
-        break;
-    case 6: 
-        console.log("Saturno");
-        break;
-    case 7:
-        console.log("Urano");
-        break;
-    case 8: 
-        console.log("Netuno");
-    default:
-        console.log("Planeta não encontrado")
-}
+// // switch (planeta) {
+// //     case 1:
+// //         console.log("Mercurio");
+// //         break;
+// //     case 2:
+// //         console.log("Venus");
+// //         break;
+// //     case 3: 
+// //         console.log("Terra");
+// //         break;
+// //     case 4:
+// //         console.log("Marte");
+// //         break;
+// //     case 5:
+// //         console.log("Jupiter");
+// //         break;
+// //     case 6: 
+// //         console.log("Saturno");
+// //         break;
+// //     case 7:
+// //         console.log("Urano");
+// //         break;
+// //     case 8: 
+// //         console.log("Netuno");
+//            break;
+// //     default:
+// //         console.log("Planeta não encontrado")
+// // }
 
-
-
-
-
-}
-
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -68,8 +65,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let direcao = "norte"
 
-console.log("_______________________________");
+// switch (direcao) {
+//     case "norte":
+//         console.log("Seguindo para o Norte ↑")
+//         break;
+//     case "sul":
+//         console.log("Seguindo para o Sul ↓")
+//         break;
+//     case "leste":
+//         console.log("Seguindo para o Leste →")
+//         break;
+//     case "oeste":
+//         console.log("Seguindo para o Oeste ←")
+//         break;
+//     default:
+//         console.log("Direção desconhecida.")
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -84,8 +99,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let tipoVeiculo = "onibus"
+// let classificacao = null
 
-console.log("_______________________________");
+// switch (tipoVeiculo) {
+//     case "bicicleta":
+//     case "moto":
+//     case "carro":
+//         classificacao = "Veiculo leve"
+//         break;
+//     case "caminhao":
+//     case "onibus":
+//         classificacao = "Veículo pesado"
+//         break;
+//     default:
+//         classificacao = "Tipo desconhecido."
+// }
+
+// console.log(`Eu tenho um(a) ${tipoVeiculo} e este(a) se encaixa como ${classificacao}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -102,8 +134,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// console.log("Menu de turnos:")
+// console.log("1 - manha")
+// console.log("2 - tarde")
+// console.log("3 - noite")
+// let usuario = perguntas.questionInt("Selecione o turno que voce quer trabalhar: ")
 
-console.log("_______________________________");
+// switch (usuario) {
+//     case 1:
+//         console.log("Bom dia! Turno da manhã.")
+//         break;
+//     case 2:
+//         console.log("Boa tarde! Turno da tarde.")
+//         break;
+//     case 3:
+//         console.log("Boa noite! Turno da noite.")
+//         break;
+//     default:
+//         console.log("Opção inválida.")
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -121,7 +172,26 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-console.log("_______________________________");
+// let estacao = perguntas.question("Qual a sua estacao favorita do ano? ")
+
+// switch (estacao) {
+//     case "verao":
+//         console.log("Dias quentes e férias!")
+//         break;
+//     case "outono":
+//         console.log("Folhas caindo e temperaturas amenas.")
+//         break;
+//     case "inverno":
+//         console.log("Frio, cobertores e chocolate quente.")
+//         break;
+//     case "primavera":
+//         console.log("Flores, calor e renovação.")
+//         break;
+//     default:
+//         console.log("Estação não reconhecida.")
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -132,12 +202,28 @@ console.log("_______________________________");
 //    - 1 a 5  → exiba: "Dia útil"
 //    - 6 ou 7 → exiba: "Final de semana"
 //    - default → "Número inválido"
-// c) Exiba também o nome do dia correspondente (Segunda a Domingo).
 
 // → Seu código aqui:
 
+// let numero = perguntas.questionInt("Digite um numero de 1 a 7: ")
 
-console.log("_______________________________");
+// switch (numero) {
+//     case 1:
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//         console.log("Dia útil") 
+//         break;
+//     case 6:
+//     case 7:
+//         console.log("Final de semana") 
+//         break;
+//     default:
+//         console.log("Número inválido")
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -157,8 +243,40 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let nome = perguntas.question("Digite o seu nome: ")
+// let categoria = perguntas.questionInt("Digite uma categoria:| 1)Eletronico | 2)Vestuario | 3)Alimento | 4)Livro: ")
+// let preco = perguntas.questionInt("Digite o preco: ")
 
-console.log("_______________________________");
+// let produto = {
+//     nome: nome,
+//     categoria: categoria,
+//     preco: preco,
+// }
+
+// switch (produto.categoria) {
+//   case 1:
+//     produto.descricaoCategoria = "Eletrônico"
+//     produto.garantia = "12 meses"
+//     break
+//   case 2:
+//     produto.descricaoCategoria = "Vestuário"
+//     produto.garantia = "Troca em 30 dias"
+//     break
+//   case 3:
+//     produto.descricaoCategoria = "Alimento"
+//     produto.garantia = "Ver validade"
+//     break
+//   case 4:
+//     produto.descricaoCategoria = "Livro"
+//     produto.garantia = "Sem garantia"
+//     break
+//     default:
+//         produto.descricaoCategoria = "Categoria invalida" 
+//         produto.garantia = "Sem garantia"
+// }
+
+// console.table(produto)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -178,6 +296,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let nome = perguntas.question("Digite o seu nome: ")
+let nota = perguntas.questionInt("Digite sua nota (de 0 a 10): ")
+
+switch (nota) {
+    
+}
 
 console.log("_______________________________");
 

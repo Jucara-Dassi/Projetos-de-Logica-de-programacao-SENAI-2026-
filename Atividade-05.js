@@ -228,6 +228,7 @@ console.log("_______________________________");
 
 let usuario1 = {
     nome:perguntas.question('Digite seu nome:'),
+    idade: perguntasq
 }
 
 

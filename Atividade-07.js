@@ -282,6 +282,18 @@ let perguntas = require('readline-sync');
 
 // → Seu código aqui:
 
+let numeroA = perguntas.questionFloat("Informe o primeiro numero: ")
+let numeroB = perguntas.questionFloat("Informe o segundo numero: ")
+
+let operacao = perguntas.questionInt("Digite uma opcao:| 1)Soma | 2)Subtracao | 3)Multiplicacao | 4)Divisao: ")
+let simbolo
+
+let calculo = {
+    numeroA: numeroA,
+    numeroB: numeroB,
+    operacao: operacao,
+
+}
 
 
 console.log("_______________________________");
