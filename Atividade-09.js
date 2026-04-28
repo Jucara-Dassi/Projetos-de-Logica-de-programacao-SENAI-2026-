@@ -1,3 +1,4 @@
+let perguntas = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 09 – Estruturas de Controle (Repetição - For)
 // ============================================================
@@ -12,8 +13,14 @@
 
 // → Seu código aqui:
 
+// console.log("Contagem crescente:");
 
-console.log("_______________________________");
+// for (let i = 5; i <= 12; i++) {
+//   console.log(i);
+// }
+
+// console.log("Contagem concluida!")
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -26,7 +33,14 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-console.log("_______________________________");
+// console.log("Contagem decrescente:");
+
+// for (let i = 10; i >= 3; i--) {
+//   console.log(`Número: ${i}`);
+// }
+
+// console.log("Lançamento! 🚀");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -37,8 +51,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// console.log("Pares de 2 a 30:");
 
-console.log("_______________________________");
+// let pares = 0;
+
+// for (let i = 0; i <= 30; i += 2) {
+//   console.log(i);
+//   pares ++
+// }
+
+// console.log(`Quantidade de numeros pares exibidos: ${pares}`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -50,8 +73,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let x = perguntas.questionInt("Informe um numero inteiro: ");
 
-console.log("_______________________________");
+// console.log (`Tabuada de ${x}:`);
+
+// for (let i = 1; i <= 10; i ++) {
+//     let resultado = x * i;
+//     console.log(`${x} x ${i} = ${resultado}`);
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -63,9 +94,17 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let n = perguntas.questionInt("Informe um numero inteiro positivo: ");
+// let soma = 0;
 
-console.log("_______________________________");
+// console.log (`Calculo de ${n}:`);
 
+// for (let i = 1; i <= n; i++) {
+//         soma += i;
+// } 
+
+// console.log(`A soma de 1 até ${n} é ${soma}`);
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Fatorial
@@ -78,23 +117,36 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let N = perguntas.questionInt("Informe um numero inteiro de 1 a 10: ");
+// fatorial = 1;
 
-console.log("_______________________________");
+// for (let i = 1; i <= N; i++) {
+//      fatorial *= i;
+// }   
+
+// console.log(`${N}! = ${fatorial}`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Percorrendo um array
 // ------------------------------------------------------------
 // a) Utilizando o array:
-    const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+    // const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 // b) Utilizando de um for, exiba cada cidade com seu índice no formato:
 //    "[<indice>] - <Cidade>"
 // c) Ao final, exiba: "Total de cidades: <quantidade>"
 
 // → Seu código aqui:
 
+// const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 
-console.log("_______________________________");
+// for (let i = 0; i < cidades.length; i++) {
+//   console.log(`[${i}] ${cidades[i]}`);
+// }
+
+// console.log(`Total de cidades: ${cidades.length}`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -109,15 +161,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25];
+// let maior = temperaturas[0];
+// let menor = temperaturas[0];
 
-console.log("_______________________________");
+// for (let i = 1; i < temperaturas.length; i++){
+//   if (temperaturas[i] > maior) maior = temperaturas[i];
+//   if(temperaturas[i] < menor) menor = temperaturas[i];
+// }
+
+// console.log(`Maior temperatura: ${maior} C°`);
+// console.log(`Menor temperatura: ${menor} C°`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Contando com condição
 // ------------------------------------------------------------
 // a) Utilizando do array:
-    const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
+    // const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
 // b) Usando um for, conte:
 //    - Quantas pessoas são menores de idade (< 18)
 //    - Quantas são maiores de idade (>= 18)
@@ -126,14 +188,29 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-console.log("_______________________________");
+// const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
+
+// let maiorDeIdade = 0;
+// let menorDeIdade = 0;
+
+// for (let i = 0; i < idades.length; i++) {
+//   if (idades[i] > 18) {
+//     maiorDeIdade ++
+// } else {
+//     menorDeIdade++
+// }
+// }
+
+// console.log(`Tem ${maiorDeIdade} pessoas que são maiores de idade`);
+// console.log(`Tem ${menorDeIdade} pessoas que são menores de idade`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 10 – Média com array
 // ------------------------------------------------------------
 // a) Utilizando do array:
-    const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
+    // const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
 // b) Usando um for, calcule a média salarial.
 // c) Exiba a média no formato: "Média salarial: R$ <media>"
 // d) Usando outro for, exiba cada salário e se está acima ou abaixo da média:
@@ -142,15 +219,29 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
 
-console.log("_______________________________");
+// let total = 0;
+
+// for (let i = 0; i < salarios.length; i++)
+//     total += salarios[i]
+
+// let media = total / salarios.length;
+// console.log(`Média salarial: R$ ${total / salarios.length}`);
+
+
+// for (let i = 0; i < salarios.length; i++){
+//     if (salarios[i] < media) console.log(`R$ ${salarios[i]} - Abaixo da media`);
+//     if (salarios[i] > media) console.log(`R$ ${salarios[i]} - Acima da media`);
+// }
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 11 – Ranking de notas
 // ------------------------------------------------------------
-// a) Peça ao usuário o nome de 3 alunos e suas três notas, um por vez.
-// b) Armazene cada aluno como um objeto com as propriedades 'nome' e 'notas'.
+// a) Peça ao usuário o nome de 3 alunos e suas três notas, um por vez. x
+// b) Armazene cada aluno como um objeto com as propriedades 'nome' e 'notas'.  x
 // c) Guarde os 3 objetos em um array chamado 'turma'.
 // d) Calcule a média das notas da turma e armazene em uma variável 'media'.
 // e) Percorra o array e para cada aluno exiba no console:
@@ -165,6 +256,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let nome1 = perguntas.question("Informe seu nome: ");
+let nome2 = perguntas.question("Informe seu nome: ");
+let nome3 = perguntas.question("Informe seu nome: ");
+let nota1 = perguntas.questionFloat(`${nome1},informe a primeira nota: `);
+let nota2 = perguntas.questionFloat(`${nome2},informe a segunda nota: `);
+let nota3 = perguntas.questionFloat(`${nome3},informe a terceira nota: `);    
+
+let turma = [
+  {
+    nome: nome1,
+    notas: [nota1, nota2, nota3]
+  },
+  {
+    nome: nome2,
+    notas: [nota1, nota2, nota3]
+  },
+  {
+    nome: nome3,
+    notas: [nota1, nota2, nota3]
+  }
+];
+
+    notas: [nota1, nota2, nota3]
+  }
+];
+
+
+
+let media = (nota1 + nota2 + nota3) / 3;        
 
 console.log("_______________________________");
 
