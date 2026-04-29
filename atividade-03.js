@@ -1,4 +1,4 @@
-let perguntas = require('readline-sync');
+let rl = require('readline-sync');
 
 // ============================================================
 //   ATIVIDADE 03 – Input e Output em JavaScript
@@ -25,13 +25,13 @@ let perguntas = require('readline-sync');
 
 // → Seu código aqui:
 
-/*
-console.log("Iniciando o programa...")
-console.info('Info:A atividade atual é sobre Imput e Output')
-console.warn('Aviso:Sempre iniciar o programa com node e com o nome do arquivo')
-console.error('Error: Não foi possivel executar sua ação')
-console.log("_______________________________");
-*/
+
+// console.log("Iniciando o programa...")
+// console.info('Info:A atividade atual é sobre Imput e Output')
+// console.warn('Aviso:Sempre iniciar o programa com node e com o nome do arquivo')
+// console.error('Error: Não foi possivel executar sua ação')
+// console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Saudação personalizada
@@ -43,13 +43,13 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-/*
-let nomeUsuario = perguntas.question('Digite seu nome: ');
-let idadeUsuario = perguntas.questionInt('Digite sua idade: ')
 
-console.log(`Olá, ${nomeUsuario}!Voce tem ${idadeUsuario} anos`);
-console.log("_______________________________");
-*/
+// let nomeUsuario = perguntas.question('Digite seu nome: ');
+// let idadeUsuario = perguntas.questionInt('Digite sua idade: ')
+
+// console.log(`Olá, ${nomeUsuario}!Voce tem ${idadeUsuario} anos`);
+// console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 3 – Ficha pessoal
@@ -60,11 +60,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-/*
+// let ficha = {
+//     nome: rl.question('Digite seu nome: '),
+//     idade: rl.questionInt('Digite sua idade: '),
+//     cidade: rl.question('Digite sua cidade: '),
+// }
 
-console.table([ficha])
-console.log("_______________________________");
-*/
+// console.table([ficha])
+// console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 4 – Perguntas de sim ou não
@@ -75,15 +79,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-/*
-let gostadedormir = perguntas.keyInYN('Voce gosta de dormir?')
-let gostadeacademia = perguntas.keyInYN('Voce gosta de fazer academia?')
+
+// let gostadedormir = perguntas.keyInYN('Voce gosta de dormir?')
+// let gostadeacademia = perguntas.keyInYN('Voce gosta de fazer academia?')
 
 
-console.log(`Você gosta de dormir?: ${gostadedormir ? "gosta" : "não gosta"}`)
-console.log(`Você gosta de fazer academia?: ${gostadeacademia ? "gosta" : "não gosta"}`)
-console.log("_______________________________");
-*/
+// console.log(`Você gosta de dormir?: ${gostadedormir ? "gosta" : "não gosta"}`)
+// console.log(`Você gosta de fazer academia?: ${gostadeacademia ? "gosta" : "não gosta"}`)
+// console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Lista de favoritos
@@ -194,38 +198,38 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-/*
-const aluno1 = {
-    nome: perguntas.question('Digite seu nome:'),
-    notas: {
-        PrimeiraNota: 4.5,
-        SegundaNota: 8,
-        TerceiraNota: 10
-        }
-    }
-const aluno2 = {
-    nome: perguntas.question('Digite seu nome:'),
-    notas: {
-        PrimeiraNota: 4.5,
-        SegundaNota: 8,
-        TerceiraNota: 10
-        }
-    }
-const aluno3 = {
-    nome: perguntas.question('Digite seu nome:'),
-    notas: perguntas.questionInt('primeita nota:');
-    perguntas.questionInt('segunda nota:'); 
-    perguntas.questionInt('terceira nota:')
-    }
-    }
-let turma = [aluno1,aluno2,aluno3]
 
-console.table([turma])
-console.log(turma[1].nome,turma[1].notas.PrimeiraNota)
-console.log(turma[2].nome,turma[2].notas.SegundaNota)
-console.log(turma[0].nome,turma[0].notas.TerceiraNota)
-console.log("_______________________________");
-*/
+// const aluno1 = {
+//     nome: perguntas.question('Digite seu nome:'),
+//     notas: {
+//         PrimeiraNota: 4.5,
+//         SegundaNota: 8,
+//         TerceiraNota: 10
+//         }
+//     }
+// const aluno2 = {
+//     nome: perguntas.question('Digite seu nome:'),
+//     notas: {
+//         PrimeiraNota: 4.5,
+//         SegundaNota: 8,
+//         TerceiraNota: 10
+//         }
+//     }
+// const aluno3 = {
+//     nome: perguntas.question('Digite seu nome:'),
+//     notas: perguntas.questionInt('primeita nota:');
+//     perguntas.questionInt('segunda nota:'); 
+//     perguntas.questionInt('terceira nota:')
+//     }
+//     }
+// let turma = [aluno1,aluno2,aluno3]
+
+// console.table([turma])
+// console.log(turma[1].nome,turma[1].notas.PrimeiraNota)
+// console.log(turma[2].nome,turma[2].notas.SegundaNota)
+// console.log(turma[0].nome,turma[0].notas.TerceiraNota)
+// console.log("_______________________________");
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Cadastro de produto
@@ -269,21 +273,24 @@ console.log("_______________________________");
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
 
-let medicamento1 = {
-    nome: perguntas.question("Nome do medicamento: "),
-    preco: perguntas.questionFloat("Preco do produto: "),
-    emEstoque: perguntas.keyInYN("Produto em estoque? : y)Sim : n)Nao"),
-}
+// let medicamento1 = {
+//     nome: perguntas.question("Nome do medicamento: "),
+//     preco: perguntas.questionFloat("Preco do produto: "),
+//     emEstoque: perguntas.keyInYN("Produto em estoque? : y)Sim : n)Nao"),
+// }
 
-let medicamento2 = {
-    nome: perguntas.question("Nome do medicamento: "),
-    preco: perguntas.questionFloat("Preco do produto: "),
-    emEstoque: perguntas.keyInYN("Produto em estoque? : y)Sim : n)Nao"),
-}
+// let medicamento2 = {
+//     nome: perguntas.question("Nome do medicamento: "),
+//     preco: perguntas.questionFloat("Preco do produto: "),
+//     emEstoque: perguntas.keyInYN("Produto em estoque? : y)Sim : n)Nao"),
+// }
 
+// let estoquefarmacia = []
+// estoquefarmacia.push(medicamento1)
+// estoquefarmacia.push(medicamento2)
 
-let estoquefarmacia = []
-estoquefarmacia.push(medicamento1)
-estoquefarmacia.push(medicamento2)
-
-console.table(estoquefarmacia)
+// console.table(estoquefarmacia)
+// console.log(medicamento2.nome)
+// console.log(medicamento2.preco)
+// console.log(medicamento1.nome)
+// console.log(medicamento1.emEstoque)

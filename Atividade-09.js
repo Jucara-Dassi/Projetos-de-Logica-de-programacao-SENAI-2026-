@@ -1,4 +1,4 @@
-let perguntas = require('readline-sync');
+let rl = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 09 – Estruturas de Controle (Repetição - For)
 // ============================================================
@@ -240,10 +240,10 @@ let perguntas = require('readline-sync');
 // ------------------------------------------------------------
 // EXERCÍCIO 11 – Ranking de notas
 // ------------------------------------------------------------
-// a) Peça ao usuário o nome de 3 alunos e suas três notas, um por vez. x
-// b) Armazene cada aluno como um objeto com as propriedades 'nome' e 'notas'.  x
-// c) Guarde os 3 objetos em um array chamado 'turma'.
-// d) Calcule a média das notas da turma e armazene em uma variável 'media'.
+// a) Peça ao usuário o nome de 3 alunos e suas três notas, um por vez. x  ok
+// b) Armazene cada aluno como um objeto com as propriedades 'nome' e 'notas'.  x  ok
+// c) Guarde os 3 objetos em um array chamado 'turma'. ok
+// d) Calcule a média das notas da turma e armazene em uma variável 'media'. ok
 // e) Percorra o array e para cada aluno exiba no console:
 //    "<nome>: <nota> – <situação>"
 //    A situação deve ser:
@@ -256,36 +256,58 @@ let perguntas = require('readline-sync');
 
 // → Seu código aqui:
 
-let nome1 = perguntas.question("Informe seu nome: ");
-let nome2 = perguntas.question("Informe seu nome: ");
-let nome3 = perguntas.question("Informe seu nome: ");
-let nota1 = perguntas.questionFloat(`${nome1},informe a primeira nota: `);
-let nota2 = perguntas.questionFloat(`${nome2},informe a segunda nota: `);
-let nota3 = perguntas.questionFloat(`${nome3},informe a terceira nota: `);    
+let aluno1 = {
+    nome: rl.question("Informe seu nome: "),
+    nota1: rl.questionFloat(`Informe a sua primeira nota: `),
+    nota2: rl.questionFloat(`Informe a sua segunda nota: `),
+    nota3: rl.questionFloat(`Informe a sua terceira nota: `),
+    media: 0
+}
 
-let turma = [
-  {
-    nome: nome1,
-    notas: [nota1, nota2, nota3]
-  },
-  {
-    nome: nome2,
-    notas: [nota1, nota2, nota3]
-  },
-  {
-    nome: nome3,
-    notas: [nota1, nota2, nota3]
-  }
-];
+let aluno2 = {
+    nome: rl.question("Informe seu nome: "),
+    nota1: rl.questionFloat(`Informe a sua primeira nota: `),
+    nota2: rl.questionFloat(`Informe a sua segunda nota: `),
+    nota3: rl.questionFloat(`Informe a sua terceira nota: `),
+    media: 0
+}
 
-    notas: [nota1, nota2, nota3]
-  }
-];
+let aluno3 = {
+    nome: rl.question("Informe seu nome: "),
+    nota1: rl.questionFloat(`Informe a sua primeira nota: `),
+    nota2: rl.questionFloat(`Informe a sua segunda nota: `),
+    nota3: rl.questionFloat(`Informe a sua terceira nota: `),
+    media: 0
+}
+
+let turma = [aluno1,aluno2,aluno3]
+let media = null;
+
+
+for(let i = 0; i < turma.length; i++){
+    console.log(turma[i].nota1 + turma[i].nota2 + turma[i].nota3);
+}
+
+for(let i = 0; i < turma.length; i++){
+    console.log(turma[i].media = turma[i].nota1 + turma[i].nota2 + turma[i].nota3 /3);
+}
 
 
 
-let media = (nota1 + nota2 + nota3) / 3;        
+// for (let i = 0; i < 11; i++){
+//     if (media.aluno1 >= 7) console.log("Aprovado");
+//     if (media.aluno2 >= 7) console.log("Aprovado");
+//     if (media.aluno3 >= 7) console.log("Aprovado");
+//     if (media.aluno1 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+//     if (media.aluno2 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+//     if (media.aluno3 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+//     if (media.aluno1 < 5) console.log("Reprovado");
+//     if (media.aluno2 < 5) console.log("Reprovado");
+//     if (media.aluno3 < 5) console.log("Reprovado");
+// }
 
+console.log(`Média da turma: ${aluno1.media + aluno2.media + aluno3.media /3}`)
+console.table(turma)
 console.log("_______________________________");
 
 

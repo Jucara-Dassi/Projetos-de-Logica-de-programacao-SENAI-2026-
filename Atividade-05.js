@@ -1,4 +1,4 @@
-let perguntas = require('readline-sync');
+let rl = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 05 – Operadores Relacionais em JavaScript
 // ============================================================
@@ -227,8 +227,8 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 let usuario1 = {
-    nome:perguntas.question('Digite seu nome:'),
-    idade: perguntasq
+    nome:rl.question('Digite seu nome:'),
+    idade: perguntas
 }
 
 

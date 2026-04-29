@@ -1,4 +1,5 @@
 let rl = require('readline-sync');
+
 // ============================================================
 //   JOGO: Adivinhe o Número
 // ============================================================
@@ -165,7 +166,6 @@ let resposta = rl.questionInt("1 - Acertei | 2 - Muito alto | 3 - Muito baixo: "
 if (resposta === 1) {
     console.log(`Acertei em ${i} tentativa(s)!`);
     acertou = true;
-    break;
 } else if (resposta === 2) {
     numMaximo = palpite - 1;
 } else if (resposta === 3) {
