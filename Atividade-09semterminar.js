@@ -292,19 +292,17 @@ for(let i = 0; i < turma.length; i++){
     console.log(turma[i].media = turma[i].nota1 + turma[i].nota2 + turma[i].nota3 /3);
 }
 
-
-
-// for (let i = 0; i < 11; i++){
-//     if (media.aluno1 >= 7) console.log("Aprovado");
-//     if (media.aluno2 >= 7) console.log("Aprovado");
-//     if (media.aluno3 >= 7) console.log("Aprovado");
-//     if (media.aluno1 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
-//     if (media.aluno2 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
-//     if (media.aluno3 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
-//     if (media.aluno1 < 5) console.log("Reprovado");
-//     if (media.aluno2 < 5) console.log("Reprovado");
-//     if (media.aluno3 < 5) console.log("Reprovado");
-// }
+for (let i = 0; i < 11; i++){
+    if (media.aluno1 >= 7) console.log("Aprovado");
+    if (media.aluno2 >= 7) console.log("Aprovado");
+    if (media.aluno3 >= 7) console.log("Aprovado");
+    if (media.aluno1 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+    if (media.aluno2 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+    if (media.aluno3 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+    if (media.aluno1 < 5) console.log("Reprovado");
+    if (media.aluno2 < 5) console.log("Reprovado");
+    if (media.aluno3 < 5) console.log("Reprovado");
+}
 
 console.log(`Média da turma: ${aluno1.media + aluno2.media + aluno3.media /3}`)
 console.table(turma)

@@ -100,28 +100,27 @@ let rl = require('readline-sync');
 
 // → Seu código aqui:
 
-let notas = rl.questionInt("Informe suas notas (digite -1 para encerrar): ");
-let somanotas = 0
-let quantnotas = 0
-let listanotas = []
+// let notas = rl.questionInt("Informe suas notas (digite -1 para encerrar): ");
+// let somanotas = 0;
+// let quantnotas = 0;
+// let listanotas = [];
 
-while (notas !== -1) {
-    somanotas += notas;
-    quantnotas++;
-    listanotas.push(notas)
+// while (notas !== -1) {
 
-if ((notas < 0 || notas > 10) && notas !== -1) {
-    console.log("Nota inválida, digite novamente.")
+// if (notas < 0 || notas > 10) {
+//      console.log("Nota inválida, digite novamente.");
+// } else {
+//     somanotas += notas;
+//     quantnotas++;
+//     listanotas.push(notas);
+// }
+//     notas = rl.questionInt("Informe suas notas (digite -1 para encerrar): ");
+// }
 
-    notas = rl.questionInt("Informe suas notas (digite -1 para encerrar): ");
-}
+// let medianotas = somanotas / quantnotas;
 
-
-let medianotas = somanotas / quantnotas
-
-console.log(`A sua media é: ${medianotas}`)
-console.log("_______________________________");
-
+// console.log(`A sua média é: ${medianotas}`);
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Do...while: menu simples
@@ -134,6 +133,7 @@ console.log("_______________________________");
 // c) O menu deve repetir até o usuário escolher 0.
 
 // → Seu código aqui:
+
 
 
 console.log("_______________________________");
@@ -154,9 +154,32 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const numeroMinimo = 1;
+// const numeroMaximo = 50;
+// const maximotentativas = 0
+// let tentativas = 0
 
-console.log("_______________________________");
+// let numeroSecreto = Math.floor(Math.random() * (numeroMaximo - numeroMinimo + 1)) + numeroMinimo;
+// let nomePlayer = rl.question("Informe o seu nome Jogador(a): ")
+// let acertou = false
 
+// while (tentativas >= numeroMinimo || tentativas <= numeroMaximo ) {
+//     let palpite = rl.questionInt(`Digite um numero: `);
+//     tentativas++
+
+// if (palpite === numeroSecreto) {
+//     console.log("Parabens! Voce acertou!");
+//     acertou = true;
+//     break;
+// } else if (palpite < numeroSecreto) {
+//     console.log("Palpite muito baixo! Tente um numero maior.");
+// } else {
+//      console.log("Palpite muito alto! Tente um numero menor.");
+// }
+// }
+
+// console.log(`${nomePlayer}, voce acertou após ${tentativas} tentativa(s)! O numero secreto era ${numeroSecreto}`)
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Tabuada com while
@@ -167,8 +190,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let numero = rl.questionInt(`Digite um numero inteiro: `);
+// let i = 1
 
-console.log("_______________________________");
+// while (i <= 10) {
+//     console.log(`${numero} x ${i} = ${numero * i}`);
+//     i++;
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -183,6 +213,22 @@ console.log("_______________________________");
 // c) Ao final, exiba o saldo restante e o total de rodadas.
 
 // → Seu código aqui:
+
+let saldo = 1000
+let rodada = 0
+let saque = 
+
+while (saldo > 0 && rodada < 10) {
+    saldo++
+    saque = rl.questionFloat("Saque: ")
+
+if (saque > saldo) {
+    console.log("Saldo insuficiente. Fim!");
+} else if (saque < saldo) {
+    console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}")
+}
+}
+
 
 
 console.log("_______________________________");
