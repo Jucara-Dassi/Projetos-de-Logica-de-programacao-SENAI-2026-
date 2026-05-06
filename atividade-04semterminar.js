@@ -78,7 +78,12 @@ console.log("_______________________________")
 
 let precoOriginal = 250
 let percentualDesconto = 15
-let valorDesconto = 250
+
+console.log(precoOriginal * percentualDesconto)
+
+
+
+let valorDesconto = 0
 
 console.log("_______________________________");
 

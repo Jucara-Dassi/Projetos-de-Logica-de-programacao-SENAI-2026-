@@ -214,24 +214,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let saldo = 1000
-let rodada = 0
-let saque = 
+// let saldo = 1000;
+// let rodada = 0;
+// let saque;
 
-while (saldo > 0 && rodada < 10) {
-    saldo++
-    saque = rl.questionFloat("Saque: ")
+// while (saldo > 0 && rodada < 10) {
+//     saque = rl.questionFloat("Saque: ");
 
-if (saque > saldo) {
-    console.log("Saldo insuficiente. Fim!");
-} else if (saque < saldo) {
-    console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}")
-}
-}
+//     if (saque > saldo) {
+//     console.log("Saldo insuficiente. Fim!");
+//     break;
 
+// }   saldo -= saque;
+//     rodada++;
 
+//     console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`);
+// }
 
-console.log("_______________________________");
+// console.log(`O saldo restante é de R$ ${saldo} após ${rodada} saques`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -250,3 +251,5 @@ console.log("_______________________________");
 
 
 console.log("_______________________________");
+
+// FALTA A 6 E A 10
