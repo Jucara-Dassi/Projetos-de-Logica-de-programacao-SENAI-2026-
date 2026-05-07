@@ -134,9 +134,32 @@ let rl = require('readline-sync');
 
 // → Seu código aqui:
 
+// let opcao;
 
+// do {
+//   console.log("1 - Exibir hora atual");
+//   console.log("2 - Exibir data atual");
+//   console.log("0 - Sair");
 
-console.log("_______________________________");
+//   opcao = rl.questionInt("Escolha uma opcao: ");
+
+// switch (opcao) {
+// case 1:
+//     console.log(new Date().toLocaleTimeString());
+//     break;
+// case 2:
+//     console.log(new Date().toLocaleDateString());
+//     break;
+// case 0:
+//     console.log("Encerrando");
+//     break;
+// default:
+//     console.log("Opcao invalida!");
+// }
+
+// } while (opcao !== 0);
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -249,7 +272,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let contatos = []
 
-console.log("_______________________________");
+// do { 
+//     let contato = {
+//     nome: rl.question("Informe o seu nome: "),
+//     telefone: rl.questionInt("Informe o seu telefone: "),
+//     }   
+//     contatos.push({contato}) 
 
-// FALTA A 6 E A 10
+//     adiContato = rl.keyInYN("Adicionar outro contato?! ")
+//   } while (adiContato !== false);
+    
+
+//   console.log('\nTotal de contatos cadastrados:');
+//   console.table(contatos);
+//   console.log("_______________________________");
+
+//ATIVIDADE FINALIZADA!

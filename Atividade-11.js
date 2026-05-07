@@ -1,3 +1,4 @@
+let rl = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 11 – Interrompendo Laços (break / continue / return)
 // ============================================================
@@ -66,29 +67,29 @@
 
 // → Seu código aqui:
 
-const notasAlunoA = [8, 7, 6.2, 9, 5, 7.5, 9, 8.9, 2.2, 10, 7.4];
-const notasAlunoB = [8, 5.5, 6.3, 9];
+// const notasAlunoA = [8, 7, 6.2, 9, 5, 7.5, 9, 8.9, 2.2, 10, 7.4];
+// const notasAlunoB = [8, 5.5, 6.3, 9];
 
-for (let i = 0; i < notasAlunoA.length; i++) {
-  if (notasAlunoA[i] < 5) {
-    console.log(`Reprovado na nota ${notasAlunoA[i]} - indice: ${i}`);
-    break;
-} 
-  if (i == notasAlunoA.length)
-   console.log("Aprovado");
-}
+// for (let i = 0; i < notasAlunoA.length; i++) {
+//   if (notasAlunoA[i] < 5) {
+//     console.log(`Reprovado na nota ${notasAlunoA[i]} - indice: ${i}`);
+//     break;
+// } 
+//   if (i == notasAlunoA.length)
+//    console.log("Aprovado");
+// }
 
-for (let i = 0; i < notasAlunoB.length; i++) {
-  if (notasAlunoB[i] < 5) {
-    console.log(`Reprovado na nota ${notasAlunoB[i]} - indice: ${i}`);
-    break;
-} 
-  if (i == notasAlunoB.length)
-   console.log("Aprovado");
+// for (let i = 0; i < notasAlunoB.length; i++) {
+//   if (notasAlunoB[i] < 5) {
+//     console.log(`Reprovado na nota ${notasAlunoB[i]} - indice: ${i}`);
+//     break;
+// } 
+//   if (i == notasAlunoB.length)
+//    console.log("Aprovado");
    
-}
+// }
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -104,8 +105,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-console.log("_______________________________");
+// let palavraSecreta = "batata"
+// let tentativas = 0
+// let nome = rl.question("\nJogador(a),informe o seu nome: ")
 
+// console.log(`\n${nome}, vamos jogar um jogo de adivinhacao!`)
+// console.log("Instruções do jogo: a palavra possui apenas letras minusculas e nao ha limite de tentativas!")
+// console.log("\nPrimeira dica: Se trata de um legume...")
+
+// while (
+//   palpite = rl.question(`\n${nome}, vamos la! Tente adivinhar qual e a palavra secreta: `)
+// ) { tentativas++
+// if (palpite == palavraSecreta) {
+//     console.log("\nParabéns! Você acertou!")
+//     break;
+// } else {
+//   console.log(`\nErrouuuu ${nome}! Tente novamente.`)
+// }
+// } 
+
+// console.log(`\n${nome}, você precisou de ${tentativas} tentativa(s) para acertar a palavra secreta.`)
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Continue com input: somando positivos
@@ -120,9 +140,27 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let soma = 0
+let positivos = 0
+let numeros = []
 
+numeros = 
+
+// while (
+//   rl.questionInt("Digite um número: ")
+// ) { soma++
+//   positivos++
+//   numeros.push
+
+//   if (numeros < 0) {
+//   console.log("Ignorando número negativo.")
+// } 
+
+console.log(`Soma dos positivos: ${soma}`)
+console.log(`Quantidade de positivos: ${positivos}`)
 console.log("_______________________________");
 
+//VERIFICAR CODIGO, PAREI AQUI!
 
 // ------------------------------------------------------------
 // EXERCÍCIO 6 – Return: busca em array de objetos

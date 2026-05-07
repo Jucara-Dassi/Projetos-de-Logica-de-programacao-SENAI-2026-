@@ -326,3 +326,5 @@ console.log("_______________________________");
 
 
 console.log("_______________________________");
+
+//FALTA TERMINAR A QUESTAO 11 E FAZER A 12.

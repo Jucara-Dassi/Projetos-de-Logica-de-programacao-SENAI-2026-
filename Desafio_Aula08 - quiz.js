@@ -189,3 +189,6 @@ let perguntas = require('readline-sync');
 // }
     
 // console.table(resultado)
+
+
+//DESAFIO FEITO!

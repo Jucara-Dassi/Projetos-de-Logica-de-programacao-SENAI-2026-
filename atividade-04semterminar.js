@@ -215,3 +215,5 @@ let turma = {
 
 
 console.log("_______________________________");
+
+//ATIVIDADE PERDIDA, FALTA DA 3 A 10.

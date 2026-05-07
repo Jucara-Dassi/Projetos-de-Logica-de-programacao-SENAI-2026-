@@ -346,3 +346,5 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 console.log("_______________________________");
+
+//FALTA FAZER DA 8 A 10.

@@ -297,3 +297,5 @@ let calculo = {
 
 
 console.log("_______________________________");
+
+//FALTA APENAS A QUESTAO 10.
