@@ -1,3 +1,4 @@
+let rl = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 12 – Estruturas de Dados: Vetor (Array)
 // ============================================================
@@ -18,12 +19,12 @@
 // const cidades = ["jaragua", "guaramirim", "schroeder", "joinville", "pomerode"]
 
 // for (let i = 0; i < cidades.length; i++) {
-//     console.log(cidades)
-//     break
+//       console.log(cidades)
+//       break
 // }
 
 // console.log(cidades[0])
-// console.log(cidades[cidades.length -1])
+// console.log(cidades[cidades.length - 1])
 // console.log(cidades.length)
 // console.log("_______________________________");
 
@@ -43,9 +44,9 @@
 // let soma = 0
 
 // for (let i = 0; i < numeros.length; i++) {
-//     soma += numeros[i];
-//   }
-  
+//       soma += numeros[i];
+// }
+
 // const media = soma / numeros.length;
 
 // console.log(`Soma: ${soma}`);
@@ -62,7 +63,7 @@
 
 // → Seu código aqui:
 
-////FORMATO 1:
+// //FORMATO 1:
 // const temperaturas = [22.5, 19.0, 27.3, 18.7, 30.1, 25.4, 21.8];
 // let maior = temperaturas[0];
 
@@ -77,13 +78,13 @@
 // let menor = temperaturas[0];
 
 // for (let i = 1; i < temperaturas.length; i++) {
-//     if (temperaturas[i] > maior) {
-//         maior = temperaturas[i];
-//     }
+//       if (temperaturas[i] > maior) {
+//             maior = temperaturas[i];
+//       }
 
-//     if (temperaturas[i] < menor) {
-//         menor = temperaturas[i];
-//     } 
+//       if (temperaturas[i] < menor) {
+//             menor = temperaturas[i];
+//       }
 // }
 
 // console.log(`Maior temperaura: ${maior}°C`);
@@ -102,20 +103,28 @@
 
 // → Seu código aqui:
 
-const listaNumeros = [4, 7, 10, 13, 16, 19, 22, 25, 28];
-let par = 0
-let impar = 0
+// const listaNumeros = [4, 7, 10, 13, 16, 19, 22, 25, 28];
 
+// let par = 0
+// let impar = 0
 
+// for (let i = 0; i < listaNumeros.length; i++) {
+//       if (listaNumeros[i] % 2 === 0) {
+//             par++
+//       } else {
+//             impar++
+//       }
+// }
 
-console.log("_______________________________");
+// console.log(`Pares (${par}): ${listaNumeros.filter(num => num % 2 === 0)}`);
+// console.log(`Ímpares (${impar}): ${listaNumeros.filter(num => num % 2 !== 0)}`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 5 – Inversão de vetor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const vetorOriginal = ["A", "B", "C", "D", "E"];
 // b) Usando for(), crie um novo vetor 'vetorInvertido' com os elementos em ordem reversa.
 // c) Exiba ambos os vetores:
 //    "Original:  <original>"
@@ -125,8 +134,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const vetorOriginal = ["A", "B", "C", "D", "E"];
+// let vetorInvertido = [];
 
-console.log("_______________________________");
+// for (let i = vetorOriginal.length - 1; i >= 0; i--) {
+//       vetorInvertido.push(vetorOriginal[i]);
+// }
+
+// console.log(`Original: ${vetorOriginal}`);
+// console.log(`Invertido: ${vetorInvertido}`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -140,15 +157,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let produtos = [];
+// let qtdProdutos = rl.question("Quantos produtos deseja cadastrar? ");
 
-console.log("_______________________________");
+// for (let i = 0; i < qtdProdutos; i++) {
+//       let nomeProduto = rl.question(`Digite o nome do produto ${i + 1}:`);
+//       produtos.push(nomeProduto);
+// }
+
+// console.log(`Produtos cadastrados: ${produtos}`);
+// console.log(`${produtos.length} produtos cadastrados.`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Busca em vetor
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const alunos = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
 // b) Pergunte ao usuário o nome de um aluno.
 // c) Usando for e break, verifique se o nome existe na lista.
 //    - Se existir: "<nome> está matriculado(a) (índice <i>)."
@@ -156,20 +181,30 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const alunos = ["Ana", "Bruno", "Carla", "Diego", "Eva"];
 
-console.log("_______________________________");
+// let nomeAluno = rl.question("Digite o nome do aluno: ");
+// let nomeNaLista = false;
+
+// for (let i = 0; i < alunos.length; i++) {
+//       if (alunos[i] === nomeAluno) {
+//             nomeNaLista = true;
+//             console.log(`${nomeAluno} está matriculado(a) no índice ${i}.`);
+//             break;
+//       }
+// }
+
+// if (!nomeNaLista) {
+//       console.log(`${nomeAluno} não foi encontrado(a).`);
+// }
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Vetor de objetos
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const livros = [
-        { titulo: "Dom Casmurro",       paginas: 256 },
-        { titulo: "O Cortiço",          paginas: 304 },
-        { titulo: "Memórias Póstumas",  paginas: 208 },
-        { titulo: "Capitães da Areia",  paginas: 280 },
-      ];
 // b) Exiba a lista com console.table().
 // c) Usando for, calcule:
 //    - Total de páginas de todos os livros.
@@ -178,15 +213,37 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const livros = [
+//       { titulo: "Dom Casmurro", paginas: 256 },
+//       { titulo: "O Cortiço", paginas: 304 },
+//       { titulo: "Memórias Póstumas", paginas: 208 },
+//       { titulo: "Capitães da Areia", paginas: 280 },
+// ];
 
-console.log("_______________________________");
+// console.table(livros);
+
+// let totalPaginas = 0;
+// let maisPaginas = livros[0];
+
+// for (let i = 0; i < livros.length; i++) {
+//       totalPaginas += livros[i].paginas;
+//       if (livros[i].paginas > maisPaginas.paginas)
+//             maisPaginas = livros[i];
+// }
+
+// let mediaPaginas = totalPaginas / livros.length;
+
+// console.log(`Total de páginas: ${totalPaginas}`);
+// console.log(`Média de páginas por livro: ${mediaPaginas.toFixed(2)}`);
+// console.log(`Livro com mais páginas: ${maisPaginas.titulo} (${maisPaginas.paginas} páginas)`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Filtro com push
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-      const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
+
 // b) Usando for, separe o vetor acima em dois vetores:
 //    - menores[]: pessoas com idade < 18
 //    - adultos[]: pessoas com idade >= 18
@@ -196,8 +253,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const idades = [12, 17, 21, 15, 30, 45, 9, 67, 19, 8];
 
-console.log("_______________________________");
+// let menores = [];
+// let adultos = [];
+
+// for (let i = 0; i < idades.length; i++) {
+//       if (idades[i] < 18) {
+//             menores.push(idades[i]);
+//       } else {
+//             adultos.push(idades[i]);
+//       }
+// }
+
+// console.log(`Menores (${menores.length}): ${menores}`);
+// console.log(`Adultos (${adultos.length}): ${adultos}`);
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -216,5 +287,62 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let notas = [];
+// let opcao;
 
-console.log("_______________________________");
+// do {
+//       console.log("Menu:");
+//       console.log("1 - Adicionar nota");
+//       console.log("2 - Listar notas");
+//       console.log("3 - Estatisticas");
+//       console.log("4 - Remover ultima");
+//       console.log("5 - Limpar todas");
+//       console.log("0 - Sair");
+//       opcao = rl.question("Escolha uma opcao: ");
+
+//       switch (opcao) {
+//             case "1":
+//                   let novaNota = parseFloat(rl.question("Digite a nota: "));
+//                   if (!isNaN(novaNota)) {
+//                         notas.push(novaNota);
+//                         console.log("Nota adicionada.");
+//                   } else {
+//                         console.log("Valor invalido. Tente novamente.");
+//                   }
+//                   break;
+//             case "2":
+//                   console.log(`Notas: ${notas}`);
+//                   break;
+//             case "3":
+//                   if (notas.length > 0) {
+//                         let somaNotas = notas.reduce((acc, nota) => acc + nota, 0);
+//                         let mediaNotas = somaNotas / notas.length;
+//                         console.log(`Total de notas: ${notas.length}`);
+//                         console.log(`Soma das notas: ${somaNotas}`);
+//                         console.log(`Média das notas: ${mediaNotas.toFixed(2)}`);
+//                   } else {
+//                         console.log("Nenhuma nota registrada.");
+//                   }
+//             case "4":
+//                   if (notas.length > 0) {
+//                         notas.pop();
+//                         console.log("Última nota removida.");
+//                   } else {
+//                         console.log("Nenhuma nota para remover.");
+//                   }
+//             case "5":
+//                   notas = [];
+//                   console.log("Todas as notas foram limpas.");
+//                   break;
+//             case "0":
+//                   console.log(`Encerrando. Total de notas registradas: ${notas.length}`);
+//                   break;
+//             default:
+//                   console.log("Opção inválida. Tente novamente.");
+//       }
+
+// } while (opcao !== "0");
+
+// console.log("_______________________________");
+
+
