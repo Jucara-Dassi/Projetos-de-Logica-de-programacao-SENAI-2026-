@@ -282,20 +282,43 @@ let perguntas = require('readline-sync');
 
 // → Seu código aqui:
 
-let numeroA = perguntas.questionFloat("Informe o primeiro numero: ")
-let numeroB = perguntas.questionFloat("Informe o segundo numero: ")
+// let numeroA = perguntas.questionFloat("Informe o primeiro numero: ")
+// let numeroB = perguntas.questionFloat("Informe o segundo numero: ")
 
-let operacao = perguntas.questionInt("Digite uma opcao:| 1)Soma | 2)Subtracao | 3)Multiplicacao | 4)Divisao: ")
-let simbolo
+// let operacao = perguntas.questionInt("Digite uma opcao:| 1)Soma | 2)Subtracao | 3)Multiplicacao | 4)Divisao: ")
+// let simbolo
 
-let calculo = {
-    numeroA: numeroA,
-    numeroB: numeroB,
-    operacao: operacao,
+// let calculo = {
+//     numeroA: numeroA,
+//     numeroB: numeroB,
+//     operacao: operacao,
 
-}
+// }
 
+// if (operacao === 1) {
+//     simbolo = "+"
+//     resultado = numeroA + numeroB
+// } else if (operacao === 2) {
+//     simbolo = "-"
+//     resultado = numeroA - numeroB
+// } else if (operacao === 3) {
+//     simbolo = "*"
+//     resultado = numeroA * numeroB
+// } else if (operacao === 4) {
+//     simbolo = "/"
 
-console.log("_______________________________");
+//     if (numeroB === 0) {
+//         console.log("Erro: Divisão por zero não é permitida.")
+//     } else {
+//         resultado = numeroA / numeroB
+//     }
 
-//FALTA APENAS A QUESTAO 10.
+// }
+
+// if (resultado !== undefined) {
+//     console.log(`${numeroA} ${simbolo} ${numeroB} = ${resultado}`)
+// }
+
+// console.log("_______________________________");
+
+//finalizado.

@@ -1,4 +1,4 @@
-let perguntas = require('readline-sync');
+let rl = require('readline-sync');
 // ============================================================
 //   ATIVIDADE 04 – Operadores Aritméticos em JavaScript
 // ============================================================
@@ -76,16 +76,15 @@ console.log("_______________________________")
 
 // → Seu código aqui:
 
-let precoOriginal = 250
-let percentualDesconto = 15
+// let precoOriginal = 250
+// let percentualDesconto = 15
 
-console.log(precoOriginal * percentualDesconto)
+// let valorDesconto = precoOriginal * (percentualDesconto / 100)
 
+// let precoFinal = precoOriginal - valorDesconto
 
-
-let valorDesconto = 0
-
-console.log("_______________________________");
+// console.log(`Preço original: R$ ${precoOriginal.toFixed(2)} | Desconto: R$ ${valorDesconto.toFixed(2)} | Preço final: R$ ${precoFinal.toFixed(2)}`) // e)          
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -101,8 +100,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let pontos = 100
+// pontos += 50
+// console.log(`Pontos após soma: ${pontos}`)
+// pontos -= 30
+// console.log(`Pontos após substracao: ${pontos}`)
+// pontos *= 2
+// console.log(`Pontos após multiplicacao: ${pontos}`)
+// pontos /= 4
+// console.log(`Pontos após divisao: ${pontos}`)
 
-console.log("_______________________________");
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -117,8 +126,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let vidas = 3
+// console.log(`Vidas atuais: ${vidas}`)
+// vidas++
+// console.log(`Vidas após 1º incremento: ${vidas}`)
+// vidas--
+// console.log(`Vidas após decremento: ${vidas}`)
 
-console.log("_______________________________");
+// let nivel = 1
+// ++nivel
+// console.log(`Nivel atual: ${nivel}`)
+
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -134,6 +154,7 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+//parei aqui, falta do 6 a 10  
 
 console.log("_______________________________");
 

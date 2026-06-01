@@ -226,17 +226,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let usuario1 = {
-    nome:rl.question('Digite seu nome:'),
-    idade: perguntas
-}
+// let usuario1 = {
+//     nome: rl.question('Digite o nome da primeira pessoa: '),
+//     idade: rl.questionInt('Digite a idade da primeira pessoa: ')
+// }   
+// let usuario2 = {
+//     nome: rl.question('Digite o nome da segunda pessoa: '),
+//     idade: rl.questionInt('Digite a idade da segunda pessoa: ')
+// }
+
+// let cadastro = [usuario1, usuario2]
+// let idadePessoa1 = cadastro[0].idade
+// let idadePessoa2 = cadastro[1].idade
 
 
-let cadastro = [usuario1, usuario2]
-
-
-console.log(`Idade da ${usuario1.idade} é <idadePessoa1> e ela é ${idadePessoa1 >= 18 ? "maior de idade" : "menor de idade"}.`)
-console.log("_______________________________");
+// console.log(`\nIdade de ${usuario1.nome} é ${idadePessoa1} anos e é maior do que de ${usuario2.nome} que tem ${idadePessoa2}? : ${idadePessoa1 > idadePessoa2? "sim" : "nao"}`)
+// console.log(`Idade de ${usuario1.nome} é igual ao de ${usuario2.nome}? : ${idadePessoa1 === idadePessoa2? "sim" : "nao"}`)
+// console.log(`Idade de ${usuario1.nome} é ${idadePessoa1} anos e ele(ela) é ${idadePessoa1 >= 18 ? "maior de idade" : "menor de idade"}.`)
+// console.log(`Idade de ${usuario2.nome} é ${idadePessoa2} anos e ele(ela) é ${idadePessoa2 >= 18 ? "maior de idade" : "menor de idade"}.`)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -244,12 +252,33 @@ console.log("_______________________________");
 // ------------------------------------------------------------
 // a) Peça ao usuário o nome e três notas de 2 alunos e armazene como objetos dentro de uma lista "alunos".
 // b) Calcule a média de cada aluno e armazene em "mediaAluno1" e "mediaAluno2".
-// e) Verifique e exiba no console qual aluno obteve a maior média usando template literal e comparador ternário
-// c) Compare e exiba no console, qual aluno obteve a primeira maior nota, a segunda e a terceira.
+// c) Verifique e exiba no console qual aluno obteve a maior média usando template literal e comparador ternário
+// d) Compare e exiba no console, qual aluno obteve a primeira maior nota, a segunda e a terceira.
 //    Exemplo: `Aluno com primeira maior nota: ${nota1aluno1 > nota1aluno2 ? nomeAluno1 : nomeAluno2}`
 // → Seu código aqui:
 
+// let aluno1 = {
+//     nome: rl.question('Digite o nome do primeiro aluno: '),
+//     nota1: rl.questionInt('Digite a primeira nota do primeiro aluno: '),    
+//     nota2: rl.questionInt('Digite a segunda nota do primeiro aluno: '),
+//     nota3: rl.questionInt('Digite a terceira nota do primeiro aluno: ')
+// }
+// let aluno2 = {
+//     nome: rl.question('Digite o nome do segundo aluno: '),
+//     nota1: rl.questionInt('Digite a primeira nota do segundo aluno: '),    
+//     nota2: rl.questionInt('Digite a segunda nota do segundo aluno: '),
+//     nota3: rl.questionInt('Digite a terceira nota do segundo aluno: ')
+// }
 
-console.log("_______________________________");
+// let alunos = [aluno1, aluno2]
+// let mediaAluno1 = (alunos[0].nota1 + alunos[0].nota2 + alunos[0].nota3) / 3
+// let mediaAluno2 = (alunos[1].nota1 + alunos[1].nota2 + alunos[1].nota3) / 3 
 
-//FALTA A QUESTÃO 7 E 8.
+
+// console.log(`O aluno com a maior média é: ${mediaAluno1 > mediaAluno2 ? aluno1.nome : aluno2.nome}`)
+// console.log(`Aluno com primeira maior nota: ${aluno1.nota1 > aluno2.nota1 ? aluno1.nome : aluno2.nome}`)
+// console.log(`Aluno com segunda maior nota: ${aluno1.nota2 > aluno2.nota2 ? aluno1.nome : aluno2.nome}`)
+// console.log(`Aluno com terceira maior nota: ${aluno1.nota3 > aluno2.nota3 ? aluno1.nome : aluno2.nome}`)
+// console.log("_______________________________");
+
+//FINALIZADO EM 25/05/2026

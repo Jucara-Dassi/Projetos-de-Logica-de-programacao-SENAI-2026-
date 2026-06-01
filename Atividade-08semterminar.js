@@ -299,10 +299,42 @@ let perguntas = require('readline-sync');
 let nome = perguntas.question("Digite o seu nome: ")
 let nota = perguntas.questionInt("Digite sua nota (de 0 a 10): ")
 
-switch (nota) {
-    
+let aluno = {
+    nome: nome,
+    nota: nota,
+}   
+switch (aluno.nota) {
+    case 10:
+    case 9:
+        aluno.conceito = "A"
+        aluno.mensagem = "Excelente!"
+        break
+    case 8:
+    case 7:
+        aluno.conceito = "B"
+        aluno.mensagem = "Muito bom!"
+        break
+    case 6:
+    case 5:
+        aluno.conceito = "C"
+        aluno.mensagem = "Suficiente."
+        break
+    case 4:
+    case 3:
+        aluno.conceito = "D"
+        aluno.mensagem = "Em recuperação."
+        break
+    case 2:
+    case 1:
+    case 0:
+        aluno.conceito = "F"
+        aluno.mensagem = "Reprovado."
+        break
+    default:
+        console.log("Nota inválida.")
 }
 
+console.log(`${aluno.nome} – Nota: ${aluno.nota} | Conceito: ${aluno.conceito} | ${aluno.mensagem}`)        
 console.log("_______________________________");
 
 
@@ -320,6 +352,42 @@ console.log("_______________________________");
 //    No default, exiba: "Operação inválida."
 
 // → Seu código aqui:
+
+let primeiroNumero = perguntas.questionFloat("Digite o primeiro numero: ")
+let segundoNumero = perguntas.questionFloat("Digite o segundo numero: ")
+
+console.log("Menu de operações:")
+console.log("1 - Soma")
+console.log("2 - Subtração")
+console.log("3 - Multiplicação")
+console.log("4 - Divisão")
+console.log("5 - Resto")
+
+let operacao = perguntas.questionInt("Escolha uma operação: ")
+
+switch (operacao) { 
+    case 1:
+        console.log(`${primeiroNumero} + ${segundoNumero} = ${primeiroNumero + segundoNumero}`)
+        break;  
+    case 2:
+        console.log(`${primeiroNumero} - ${segundoNumero} = ${primeiroNumero - segundoNumero}`)
+        break;
+    case 3:
+        console.log(`${primeiroNumero} * ${segundoNumero} = ${primeiroNumero * segundoNumero}`)
+        break;
+    case 4:
+        if (segundoNumero === 0) {
+            console.log("Erro: divisão por zero não é permitida.")
+        } else {
+            console.log(`${primeiroNumero} / ${segundoNumero} = ${primeiroNumero / segundoNumero}`)
+        }
+        break;
+    case 5:
+        console.log(`${primeiroNumero} % ${segundoNumero} = ${primeiroNumero % segundoNumero}`)
+        break;
+    default:
+        console.log("Operação inválida.")
+}   
 
 
 console.log("_______________________________");

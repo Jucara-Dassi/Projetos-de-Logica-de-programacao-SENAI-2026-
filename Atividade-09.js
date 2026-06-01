@@ -132,7 +132,7 @@ let rl = require('readline-sync');
 // EXERCÍCIO 7 – Percorrendo um array
 // ------------------------------------------------------------
 // a) Utilizando o array:
-    // const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
+// const cidades = ["São Paulo", "Rio de Janeiro", "Curitiba", "Salvador", "Fortaleza"];
 // b) Utilizando de um for, exiba cada cidade com seu índice no formato:
 //    "[<indice>] - <Cidade>"
 // c) Ao final, exiba: "Total de cidades: <quantidade>"
@@ -179,7 +179,7 @@ let rl = require('readline-sync');
 // EXERCÍCIO 9 – Contando com condição
 // ------------------------------------------------------------
 // a) Utilizando do array:
-    // const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
+// const idades = [12, 25, 17, 34, 15, 42, 16, 29, 8, 19];
 // b) Usando um for, conte:
 //    - Quantas pessoas são menores de idade (< 18)
 //    - Quantas são maiores de idade (>= 18)
@@ -210,7 +210,7 @@ let rl = require('readline-sync');
 // EXERCÍCIO 10 – Média com array
 // ------------------------------------------------------------
 // a) Utilizando do array:
-    // const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
+// const salarios = [1800, 3200, 950, 4500, 2100, 1500, 7800, 2900];
 // b) Usando um for, calcule a média salarial.
 // c) Exiba a média no formato: "Média salarial: R$ <media>"
 // d) Usando outro for, exiba cada salário e se está acima ou abaixo da média:
@@ -256,57 +256,57 @@ let rl = require('readline-sync');
 
 // → Seu código aqui:
 
-let aluno1 = {
-    nome: rl.question("Informe seu nome: "),
-    nota1: rl.questionFloat(`Informe a sua primeira nota: `),
-    nota2: rl.questionFloat(`Informe a sua segunda nota: `),
-    nota3: rl.questionFloat(`Informe a sua terceira nota: `),
-    media: 0
-}
+// let aluno1 = {
+//     nome: rl.question("Informe seu nome: "),
+//     nota1: rl.questionFloat(`Informe a sua primeira nota: `),
+//     nota2: rl.questionFloat(`Informe a sua segunda nota: `),
+//     nota3: rl.questionFloat(`Informe a sua terceira nota: `),
+//     media: 0
+// }
 
-let aluno2 = {
-    nome: rl.question("Informe seu nome: "),
-    nota1: rl.questionFloat(`Informe a sua primeira nota: `),
-    nota2: rl.questionFloat(`Informe a sua segunda nota: `),
-    nota3: rl.questionFloat(`Informe a sua terceira nota: `),
-    media: 0
-}
+// let aluno2 = {
+//     nome: rl.question("Informe seu nome: "),
+//     nota1: rl.questionFloat(`Informe a sua primeira nota: `),
+//     nota2: rl.questionFloat(`Informe a sua segunda nota: `),
+//     nota3: rl.questionFloat(`Informe a sua terceira nota: `),
+//     media: 0
+// }
 
-let aluno3 = {
-    nome: rl.question("Informe seu nome: "),
-    nota1: rl.questionFloat(`Informe a sua primeira nota: `),
-    nota2: rl.questionFloat(`Informe a sua segunda nota: `),
-    nota3: rl.questionFloat(`Informe a sua terceira nota: `),
-    media: 0
-}
+// let aluno3 = {
+//     nome: rl.question("Informe seu nome: "),
+//     nota1: rl.questionFloat(`Informe a sua primeira nota: `),
+//     nota2: rl.questionFloat(`Informe a sua segunda nota: `),
+//     nota3: rl.questionFloat(`Informe a sua terceira nota: `),
+//     media: 0
+// }
 
-let turma = [aluno1,aluno2,aluno3]
-let media = null;
+// let turma = [aluno1, aluno2, aluno3]
+// let media = 0;
 
 
-for(let i = 0; i < turma.length; i++){
-    console.log(turma[i].nota1 + turma[i].nota2 + turma[i].nota3);
-}
+// for (let i = 0; i < turma.length; i++) {
+//     console.log(turma[i].nota1 + turma[i].nota2 + turma[i].nota3);
+// }
 
-for(let i = 0; i < turma.length; i++){
-    console.log(turma[i].media = turma[i].nota1 + turma[i].nota2 + turma[i].nota3 /3);
-}
+// for (let i = 0; i < turma.length; i++) {
+//     console.log(turma[i].media = turma[i].nota1 + turma[i].nota2 + turma[i].nota3 / 3);
+// }
 
-for (let i = 0; i < 11; i++){
-    if (media.aluno1 >= 7) console.log("Aprovado");
-    if (media.aluno2 >= 7) console.log("Aprovado");
-    if (media.aluno3 >= 7) console.log("Aprovado");
-    if (media.aluno1 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
-    if (media.aluno2 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
-    if (media.aluno3 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
-    if (media.aluno1 < 5) console.log("Reprovado");
-    if (media.aluno2 < 5) console.log("Reprovado");
-    if (media.aluno3 < 5) console.log("Reprovado");
-}
+// for (let i = 0; i < 11; i++) {
+//     if (media.aluno1 >= 7) console.log("Aprovado");
+//     if (media.aluno2 >= 7) console.log("Aprovado");
+//     if (media.aluno3 >= 7) console.log("Aprovado");
+//     if (media.aluno1 >= 5 && media.aluno1 < 7) console.log("Recuperacao");
+//     if (media.aluno2 >= 5 && media.aluno2 < 7) console.log("Recuperacao");
+//     if (media.aluno3 >= 5 && media.aluno3 < 7) console.log("Recuperacao");
+//     if (media.aluno1 < 5) console.log("Reprovado");
+//     if (media.aluno2 < 5) console.log("Reprovado");
+//     if (media.aluno3 < 5) console.log("Reprovado");
+// }
 
-console.log(`Média da turma: ${aluno1.media + aluno2.media + aluno3.media /3}`)
-console.table(turma)
-console.log("_______________________________");
+// console.log(`Média da turma: ${aluno1.media + aluno2.media + aluno3.media / 3}`)
+// console.table(turma)
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -324,7 +324,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let produtos = rl.questionInt("Quantos produtos deseja cadastrar? ");
+// let estoque = [];
 
-console.log("_______________________________");
+// for (let i = 0; i < produtos; i++) {
+//     let produto = {
+//         nome: rl.question("Informe o nome do produto: "),
+//         preco: rl.questionFloat("Informe o preço do produto: ")
+//     }
+//     estoque.push(produto);
+// }
 
-//FALTA TERMINAR A QUESTAO 11 E FAZER A 12.
+// for (let i = 0; i < estoque.length; i++) {
+//     console.log(`${estoque[i].nome}: R$ ${estoque[i].preco}`);
+// }
+
+// console.table(estoque);
+// console.log("_______________________________");
+
