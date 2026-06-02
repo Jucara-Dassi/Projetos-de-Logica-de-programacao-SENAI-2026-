@@ -9,14 +9,17 @@
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Acessar e alterar elementos de array
 // ------------------------------------------------------------
-const frutas = ['maçã', 'banana', 'laranja', 'uva'];
 // a) Acesse o primeiro e o terceiro elemento e exiba com console.log().
 // b) Substitua o segundo elemento por 'abacaxi' usando atribuição direta.
 
 // → Seu código aqui:
 
+// const frutas = ['maçã', 'banana', 'laranja', 'uva'];
 
-console.log("_______________________________");
+// console.log(frutas[0]);
+// console.log(frutas[2]);
+// frutas[1] = 'abacaxi';
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------

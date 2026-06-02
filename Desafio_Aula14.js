@@ -20,6 +20,29 @@
 
 // → Seu código aqui:
 
+function mostrarHora() {  
+  const agora = new Date();
+  const horas = String(agora.getHours()).padStart(2, '0');
+  const minutos = String(agora.getMinutes()).padStart(2, '0');
+  const segundos = String(agora.getSeconds()).padStart(2, '0');
+  console.log(`Hora atual: ${horas}:${minutos}:${segundos}`);
+}
+
+function mostrarData() {
+  const agora = new Date();
+  const dia = String(agora.getDate()).padStart(2, '0');
+  const mes = String(agora.getMonth() + 1).padStart(2, '0');
+  const ano = agora.getFullYear();
+  console.log(`Data atual: ${dia}/${mes}/${ano}`);
+}
+
+function agora() {
+  mostrarData();
+  mostrarHora();
+}
+
+qualquerIntervalo = 5000; // 5 segundos
+agora();
 
 console.log("_______________________________");
 
@@ -53,12 +76,6 @@ console.log("_______________________________");
 // DESAFIO 3 – Sistema de notícias
 // ------------------------------------------------------------
 // a) Utilizando o array:
-const noticias = [
-  { titulo: "Tecnologia X é lançada",  texto: "Empresa Y revoluciona o mercado..." },
-  { titulo: "Economia em alta",        texto: "Bolsa fecha o dia em alta de 2%..." },
-  { titulo: "Esporte: time campeão",   texto: "O time A conquistou o título..." },
-  { titulo: "Cultura: novo filme",     texto: "Estreia no cinema o longa Z..." },
-];
 // b) Crie 1 função 'manchete', que exibe:
 //        |── MANCHETE ─────────────────
 //        | <título>
@@ -72,7 +89,28 @@ const noticias = [
 
 // → Seu código aqui:
 
+const noticias = [
+  { titulo: "Tecnologia X é lançada",  texto: "Empresa Y revoluciona o mercado..." },
+  { titulo: "Economia em alta",        texto: "Bolsa fecha o dia em alta de 2%..." },
+  { titulo: "Esporte: time campeão",   texto: "O time A conquistou o título..." },
+  { titulo: "Cultura: novo filme",     texto: "Estreia no cinema o longa Z..." },
+]
+  
+function manchete(noticia) {
+  console.log("── MANCHETE ─────────────────");
+  console.log(`| ${noticia.titulo}`);
+  console.log("----------------------------");
+  console.log(`| ${noticia.texto}`);
+}
 
+function exibirJornal() {
+  for (const noticia of noticias) {
+    manchete(noticia);
+    console.log(""); // linha em branco entre as manchetes
+  }
+}
+
+exibirJornal();
 console.log("_______________________________");
 
 

@@ -20,16 +20,16 @@ let rl = require('readline-sync');
 
 // → Seu código aqui:
 
-function saudacao() {
-    console.log("Olá!");
-    console.log("Bem-vindo(a) ao curso de JavaScript.");
-    console.log("Bons estudos!");
-}
+// function saudacao() {
+//     console.log("Olá!");
+//     console.log("Bem-vindo(a) ao curso de JavaScript.");
+//     console.log("Bons estudos!");
+// }
 
-saudacao();
-saudacao();
+// saudacao();
+// saudacao();
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -45,22 +45,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function linha() {
-    console.log("----------------------------------------")
-}
+// function linha() {
+//     console.log("----------------------------------------")
+// }
 
-function titulo() {
-    console.log("         RELATÓRIO MENSAL              ")
-}
+// function titulo() {
+//     console.log("         RELATÓRIO MENSAL              ")
+// }
 
-function cabecalho() {
-    linha()
-    titulo()
-    linha()
-}
+// function cabecalho() {
+//     linha()
+//     titulo()
+//     linha()
+// }
 
-cabecalho()
-console.log("_______________________________");
+// cabecalho()
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -85,32 +85,32 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let dadosUsuarios = []
+// let dadosUsuarios = []
 
-function meusDados() {
-    
-    for (let i = 0; i < 2; i++) {
-        dadosUsuarios.push({
-            nome: rl.question("Nome:"),
-            idade: rl.questionInt("idade:"),
-            cidade: rl.question("Cidade:")
-        }) 
-    }
-}
+// function meusDados() {
 
-function exibirDados(){
-    console.log("-------------------------")
-    for (let i = 0; i < dadosUsuarios.length; i++) {
-        console.log(`Nome: ${dadosUsuarios[i].nome}`);
-        console.log(`Idade: ${dadosUsuarios[i].idade}`);
-        console.log(`Cidade: ${dadosUsuarios[i].cidade}`);
-        console.log("-------------------------")
-}
-}
+//     for (let i = 0; i < 2; i++) {
+//         dadosUsuarios.push({
+//             nome: rl.question("Nome:"),
+//             idade: rl.questionInt("idade:"),
+//             cidade: rl.question("Cidade:")
+//         }) 
+//     }
+// }
 
-meusDados()
-exibirDados()
-console.log("_______________________________");
+// function exibirDados(){
+//     console.log("-------------------------")
+//     for (let i = 0; i < dadosUsuarios.length; i++) {
+//         console.log(`Nome: ${dadosUsuarios[i].nome}`);
+//         console.log(`Idade: ${dadosUsuarios[i].idade}`);
+//         console.log(`Cidade: ${dadosUsuarios[i].cidade}`);
+//         console.log("-------------------------")
+// }
+// }
+
+// meusDados()
+// exibirDados()
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -124,13 +124,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-function sortear() {
-console.log(Math.floor(Math.random() * 100) + 1);
-}
+// function sortear() {
+//     console.log("Número sorteado: " + Math.floor(Math.random() * 100) + 1);
+// }
 
-sortear()
+// for (let i = 0; i < 5; i++) {
+//     sortear()
+// }
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -147,8 +149,23 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function tabuadaDoCinco() {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(`5 x ${i} = ${5 * i}`);
+//     }
+// }
 
-console.log("_______________________________");
+// function tabuadaDoSete() {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(`7 x ${i} = ${7 * i}`);
+//     }
+// }
+// console.log("Tabuada do cinco:");
+// tabuadaDoCinco();
+// console.log("_______________________________");
+// console.log("Tabuada do sete:");
+// tabuadaDoSete();
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -162,23 +179,38 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function converterTemperatura() {
+//     let temperatura = rl.questionFloat("Informe a temperatura atual (em Celsius):  ")
+//     let Fahrenheit = temperatura * 1.8 + 32
+//     console.log(`${temperatura}°C equivalem a ${Fahrenheit}°F`)
+// }
 
-console.log("_______________________________");
+// converterTemperatura()
+// converterTemperatura()
+// converterTemperatura()
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Listando informações
 // ------------------------------------------------------------
 // a) Utilizando o vetor:
-const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 // b) Crie a função 'listarFilmes' que percorre o vetor 'filmes' com for
 //    e exibe cada um no formato: "<i+1> - <filme>".
 // c) Chame listarFilmes() duas vezes.
 
 // → Seu código aqui:
 
+// const filmes = ["Matrix", "Interestelar", "Origem", "Senhor dos Anéis"];
 
-console.log("_______________________________");
+// function listarFilmes() {
+//     for (let i = 0; i < filmes.length; i++)
+//         console.log(`${i + 1} - ${filmes[i]}`);
+// }
+
+// listarFilmes()
+// listarFilmes()
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -197,8 +229,36 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function limparTela() {
+//     for (let i = 0; i < 30; i++) {
+//         console.log("")
+//     }
+// }
 
-console.log("_______________________________");
+// function banner() {
+//     console.log("-----------------------")
+//     console.log(" Banner de boas-vindas ")
+//     console.log("-----------------------")
+// }
+
+// function pedirNome() {
+//     let nome = rl.question("Informe o seu nome:  ")
+//     console.log(`\nOlá, ${nome}, seja bem-vindo(a)!`)
+// }
+
+// function rodape() {
+//     console.log(`\nSistema desenvolvido por Juçara`)
+// }
+
+// function programaPrincipal() {
+//     limparTela()
+//     banner()
+//     pedirNome()
+//     rodape()
+// }
+
+// programaPrincipal()
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -218,5 +278,65 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// function opcaoSomar() {
+//     let num1 = rl.questionFloat("Digite o primeiro número:  ")
+//     let num2 = rl.questionFloat("Digite o segundo número:  ")
+//     console.log(`A soma de ${num1} + ${num2} é igual a ${num1 + num2}`)
+// }
 
-console.log("_______________________________");
+// function opcaoSubtrair() {
+//     let num1 = rl.questionFloat("Digite o primeiro número:  ")
+//     let num2 = rl.questionFloat("Digite o segundo número:  ")
+//     console.log(`A subtração de ${num1} - ${num2} é igual a ${num1 - num2}`)
+// }
+
+// function opcaoMultiplicar() {
+//     let num1 = rl.questionFloat("Digite o primeiro número:  ")
+//     let num2 = rl.questionFloat("Digite o segundo número:  ")
+//     console.log(`A multiplicacao de ${num1} * ${num2} é igual a ${num1 * num2}`)
+// }
+
+// function opcaoDividir() {
+//     let num1 = rl.questionFloat("Digite o primeiro número:  ")
+//     let num2 = rl.questionFloat("Digite o segundo número:  ")
+//     console.log(`A divisao de ${num1} / ${num2} é igual a ${num1 / num2}`)
+
+// }
+
+// function exibirMenu() {
+//     console.log("Menu de opções:")
+//     console.log("1 - Somar")
+//     console.log("2 - Subtrair")
+//     console.log("3 - Multiplicar")
+//     console.log("4 - Dividir")
+//     console.log("0 - Sair")
+// }
+
+// let opcao
+
+// do {
+//     exibirMenu()
+//     opcao = rl.questionInt("Escolha uma opção do menu:  ")
+//     switch (opcao) {
+//         case 1:
+//             opcaoSomar()
+//             break;
+//         case 2:
+//             opcaoSubtrair()
+//             break;
+//         case 3:
+//             opcaoMultiplicar()
+//             break;
+//         case 4:
+//             opcaoDividir()
+//             break;
+//         case 0:
+//             console.log("Saindo...")
+//             break;
+//         default:
+//             console.log("Opcao invalida, digite novamente!")
+//     }
+// } while (opcao !== 0)
+
+
+// console.log("_______________________________");
