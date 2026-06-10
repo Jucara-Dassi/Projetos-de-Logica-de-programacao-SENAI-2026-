@@ -20,31 +20,31 @@
 
 // → Seu código aqui:
 
-function mostrarHora() {  
-  const agora = new Date();
-  const horas = String(agora.getHours()).padStart(2, '0');
-  const minutos = String(agora.getMinutes()).padStart(2, '0');
-  const segundos = String(agora.getSeconds()).padStart(2, '0');
-  console.log(`Hora atual: ${horas}:${minutos}:${segundos}`);
-}
+// function mostrarHora() {  
+//   const agora = new Date();
+//   const horas = String(agora.getHours()).padStart(2, '0');
+//   const minutos = String(agora.getMinutes()).padStart(2, '0');
+//   const segundos = String(agora.getSeconds()).padStart(2, '0');
+//   console.log(`Hora atual: ${horas}:${minutos}:${segundos}`);
+// }
 
-function mostrarData() {
-  const agora = new Date();
-  const dia = String(agora.getDate()).padStart(2, '0');
-  const mes = String(agora.getMonth() + 1).padStart(2, '0');
-  const ano = agora.getFullYear();
-  console.log(`Data atual: ${dia}/${mes}/${ano}`);
-}
+// function mostrarData() {
+//   const agora = new Date();
+//   const dia = String(agora.getDate()).padStart(2, '0');
+//   const mes = String(agora.getMonth() + 1).padStart(2, '0');
+//   const ano = agora.getFullYear();
+//   console.log(`Data atual: ${dia}/${mes}/${ano}`);
+// }
 
-function agora() {
-  mostrarData();
-  mostrarHora();
-}
+// function agora() {
+//   mostrarData();
+//   mostrarHora();
+// }
 
-qualquerIntervalo = 5000; // 5 segundos
-agora();
+// qualquerIntervalo = 5000; // 5 segundos
+// agora();
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -67,6 +67,8 @@ const cargos = ["Dev Junior", "Dev Pleno", "Tech Lead", "QA", "Designer"];
 // c) Chame imprimirCartao() 5 vezes.
 
 // → Seu código aqui:
+
+
 
 
 console.log("_______________________________");

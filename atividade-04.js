@@ -154,10 +154,19 @@ console.log("_______________________________")
 
 // → Seu código aqui:
 
-//parei aqui, falta do 6 a 10  
+// let nota = 7.3
 
-console.log("_______________________________");
+// console.log(`Math.round(${nota}) = ${Math.round(nota)}`)
+// console.log(`Math.floor(${nota}) = ${Math.floor(nota)}`)
+// console.log(`Math.ceil(${nota}) = ${Math.ceil(nota)}`)
 
+// let temperatura = -12.5
+
+// console.log(`Valor absoluto de ${temperatura} = ${Math.abs(temperatura)}`)
+// console.log(`Maior entre 42, 17, 89, 5, 63 = ${Math.max(42, 17, 89, 5, 63)}`)
+// console.log(`Menor entre 42, 17, 89, 5, 63 = ${Math.min(42, 17, 89, 5, 63)}`)
+
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Média de notas
@@ -170,9 +179,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let nota  = []
+// nota.push(rl.questionFloat("Digite a sua primeira nota: "))
+// nota.push(rl.questionFloat("Digite a sua segunda nota: "))
+// nota.push(rl.questionFloat("Digite a sua terceira nota: "))
 
-console.log("_______________________________");
+// let media = nota.reduce((acc, nota) => acc + nota, 0) / nota.length;
 
+// console.log(`Nota 1: ${nota[0]} | Nota 2: ${nota[1]} | Nota 3: ${nota[2]}`);
+// console.log(`Média: ${media.toFixed(2)}`);
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Calculadora de troco
@@ -188,44 +204,68 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let totalCompra = rl.questionFloat("Digite o valor total da compra: R$ ");
 
-console.log("_______________________________");
+// let valorEntregue;
+
+// do {
+//   valorEntregue = rl.questionFloat("Digite o valor entregue pelo cliente (deve ser maior que o total da compra): R$ ");
+//   if (valorEntregue <= totalCompra) {
+//     console.log("Valor entregue deve ser maior que o total da compra. Tente novamente.");
+//   }
+// } while (valorEntregue <= totalCompra);
+
+// let troco = valorEntregue - totalCompra;
+// console.log(`Total da compra:  R$ ${totalCompra.toFixed(2)}`);
+// console.log(`Valor entregue:   R$ ${valorEntregue.toFixed(2)}`);
+// console.log(`Troco:            R$ ${troco.toFixed(2)}`);
+// console.log("_______________________________");
+
+//feito em junho.
 
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Valor total de listas
 // ------------------------------------------------------------
 // a) Dada uma lista de preços, calcule e exiba o total.
-let precos = [29.90, 49.99, 15.75, 99.90];
-// b) Dada uma lista de notas, calcule e exiba a média.
-let notas = [7.5, 8.2, 6.5, 9.0];
-// c) Dada uma lista de idades, exiba a maior e a menor idade utilizando das funções Math().
-let idades = [15, 22, 30, 18, 25];
+// let precos = [29.90, 49.99, 15.75, 99.90];
+// // b) Dada uma lista de notas, calcule e exiba a média.
+// let notas = [7.5, 8.2, 6.5, 9.0];
+// // c) Dada uma lista de idades, exiba a maior e a menor idade utilizando das funções Math().
+// let idades = [15, 22, 30, 18, 25];
 
 // → Seu código aqui:
 
+// let totalPrecos = precos.reduce((acc, preco) => acc + preco, 0);
+// console.log(`Total dos preços: R$ ${totalPrecos.toFixed(2)}`);
 
-console.log("_______________________________");
+// let mediaNotas = notas.reduce((acc, nota) => acc + nota, 0) / notas.length;
+// console.log(`Média das notas: ${mediaNotas.toFixed(2)}`);
 
+// console.log(`Maior idade: ${Math.max(...idades)}`);
+// console.log(`Menor idade: ${Math.min(...idades)}`);
+// console.log("_______________________________");
 
 // ------------------------------------------------------------
 // EXERCÍCIO 10 – Trabalhando com objetos
 // ------------------------------------------------------------
 // Dado o objeto turma:
-let turma = {
-  aluno1: {
-    nome: "João",
-    notas: []
-  },
-  aluno2: {
-    nome: "Maria",
-    notas: []
-  },
-  aluno3: {
-    nome: "Pedro",
-    notas: []
-  }
-}
+
+// let turma = {
+//   aluno1: {
+//     nome: "João",
+//     notas: []
+//   },
+//   aluno2: {
+//     nome: "Maria",
+//     notas: []
+//   },
+//   aluno3: {
+//     nome: "Pedro",
+//     notas: []
+//   }
+// }
+
 // a) Sem alterar o objeto (utilize somente push), peça para o usuário 3 notas para cada aluno, indicando a quem pertencerá cada nota
 // b) Calcule a média de notas de cada aluno e exiba no console, indicando a quem pertence cada média
 // c) Exiba a média geral da turma
@@ -234,7 +274,29 @@ let turma = {
 
 // → Seu código aqui:
 
+// let alunos = Object.values(turma);
 
-console.log("_______________________________");
+// for (let aluno of alunos) {
+//   console.log(`Digite as notas para ${aluno.nome}:`);
+//   for (let i = 0; i < 3; i++) {
+//     let nota = rl.questionFloat(`Nota ${i + 1}: `);
+//     aluno.notas.push(nota);
+//   }
 
-//ATIVIDADE PERDIDA, FALTA DA 3 A 10.
+//   let media = aluno.notas.reduce((acc, nota) => acc + nota, 0) / aluno.notas.length;
+//   console.log(`Média de ${aluno.nome}: ${media.toFixed(2)}`);
+//   console.log(`Nota mais alta de ${aluno.nome}: ${Math.max(...aluno.notas)}`);
+//   console.log(`Nota mais baixa de ${aluno.nome}: ${Math.min(...aluno.notas)}`);
+//   console.log("_______________________________");
+// }
+
+// let todasNotas = alunos.flatMap(aluno => aluno.notas);
+// let mediaGeral = todasNotas.reduce((acc, nota) => acc + nota, 0) / todasNotas.length;
+
+
+// console.log(`Média geral da turma: ${mediaGeral.toFixed(2)}`);
+// console.log(`Nota mais alta da turma: ${Math.max(...todasNotas)}`);
+// console.log(`Nota mais baixa da turma: ${Math.min(...todasNotas)}`);
+// console.log("_______________________________");
+
+//ATIVIDADE FINALIZA EM JUNHO.
