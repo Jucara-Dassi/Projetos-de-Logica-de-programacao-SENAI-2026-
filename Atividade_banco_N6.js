@@ -243,114 +243,102 @@ function emprestimo(conta) {
     3 - Simulação de empréstimo
     4 - Consultar empréstimos
     0 - Voltar`);
-    
 
     let op = lerTeclado.questionInt("Escolha: ");
 
     if (op === 1) {
-    let valor = lerTeclado.questionFloat("Valor empréstimo: ");
-    let taxa = 8; // 8% de taxa de juros (alto risco - empréstimo pessoal)
-    let parcelas = lerTeclado.questionInt("Número de parcelas desejadas: ");
+        let valor = lerTeclado.questionFloat("Valor empréstimo: ");
+        let taxa = 8; // 8% de taxa de juros (alto risco - empréstimo pessoal)
+        let parcelas = lerTeclado.questionInt("Número de parcelas desejadas: ");
 
-    // ================= VALIDAÇÕES DE CRÉDITO PESSOAL =================
-    // 1. Verificar se valor é válido
-    if (valor <= 0) {
-        console.log("Valor inválido.");
-        return menuConta(conta);
-    }
-    // 2. Limitar valor máximo de empréstimo
-    // (bancos normalmente liberam entre 2x e 5x da renda ou limite fixo)
-    let limiteMaximo = conta.salario ? conta.salario * 5 : 5000;
-
-    if (valor > limiteMaximo) {
-        console.log(`Você pode solicitar até R$ ${limiteMaximo.toFixed(2)}.`);
-        return menuConta(conta);
-    }
-    // 3. Limitar número de parcelas
-    if (parcelas < 1 || parcelas > 48) {
-        console.log("Número de parcelas inválido (1 a 48).");
-        return menuConta(conta);
-    }
-    // 4. Simular análise de crédito (score)
-    // (simulação simples de banco real)
-    if (!conta.score) conta.score = Math.floor(Math.random() * 1000);
-
-    if (conta.score < 300) {
-        console.log("Crédito negado (score muito baixo).");
-        return menuConta(conta);
-    }
-    // 5. Verificar comprometimento de renda (se houver salário)
-    if (conta.salario) {
-        let total = valor + (valor * taxa / 100 * parcelas);
-        let parcelaMensal = total / parcelas;
-
-        let limiteParcela = conta.salario * 0.4; // até 40% da renda
-
-        if (parcelaMensal > limiteParcela) {
-            console.log(`Parcela de R$ ${parcelaMensal.toFixed(2)} excede 40% da renda.`);
+        // ================= VALIDAÇÕES DE CRÉDITO PESSOAL =================
+        // 1. Verificar se valor é válido
+        if (valor <= 0) {
+            console.log("Valor inválido.");
             return menuConta(conta);
         }
-    }
-    // ================= APROVAÇÃO =================
-    console.log(`Total a pagar: R$ ${(valor + (valor * taxa / 100 * parcelas)).toFixed(2)}`);
-    console.log("Deseja confirmar o empréstimo? (S/N)");
 
-    let confirmacao = lerTeclado.question().toUpperCase();
+        // 2. Limitar valor máximo de empréstimo
+        // (bancos normalmente liberam entre 2x e 5x da renda ou limite fixo)
+        let limiteMaximo = conta.saldo * 5; // exemplo: até 5x o saldo atual
 
-    if (confirmacao === "S") {
-        console.log(`Empréstimo de R$ ${valor.toFixed(2)} aprovado!`);
-        conta.saldo += valor;
-        menuConta(conta);
+        if (valor > limiteMaximo) {
+            console.log(`Você pode solicitar até R$ ${limiteMaximo.toFixed(2)}.`);
+            return menuConta(conta);
+        }
+        // 3. Limitar número de parcelas
+        if (parcelas < 1 || parcelas > 48) {
+            console.log("Número de parcelas inválido (1 a 48).");
+            return menuConta(conta);
+        }
 
-    } else {
-        console.log("Empréstimo cancelado.");
-        menuConta(conta);
-    }
-}
-    
-if (op === 2) { 
-    let valor = lerTeclado.questionFloat("Valor empréstimo: ");
-    let taxa = 3; // 3% de taxa de juros
-    let parcelas = lerTeclado.questionInt("Número de parcelas desejadas: ");
+        // ================= APROVAÇÃO =================
+        console.log(`Total a pagar: R$ ${(valor + (valor * taxa / 100 * parcelas)).toFixed(2)}`);
+        console.log("Deseja confirmar o empréstimo? (S/N)");
 
-    // ================= VALIDAÇÕES CONSIGNADO =================
-    if (!conta.salario || conta.salario <= 0) {
-        console.log("Empréstimo consignado disponível apenas para quem possui renda cadastrada.");
-        return menuConta(conta);
-    }
+        let confirmacao = lerTeclado.question().toUpperCase();
 
-    let valorParcela = (valor + (valor * taxa / 100 * parcelas)) / parcelas;
+        if (confirmacao === "S") {
+            console.log(`Emprestimo de R$ ${valor.toFixed(2)} aprovado!`);
+            conta.saldo += valor;
+            menuConta(conta);
 
-    let limiteParcela = conta.salario * 0.3; // 30% da renda
-
-    if (valorParcela > limiteParcela) {
-        console.log(`Parcela de R$ ${valorParcela.toFixed(2)} excede 30% da sua renda.`);
-        console.log(`Valor máximo de parcela permitido: R$ ${limiteParcela.toFixed(2)}`);
-        return menuConta(conta);
+        } else {
+            console.log("Emprestimo cancelado.");
+            menuConta(conta);
+        }
     }
 
-    // ================= SE PASSOU NAS REGRAS =================
-    console.log(`Total a pagar: R$ ${(valor + (valor * taxa / 100 * parcelas)).toFixed(2)}`);
-    console.log("Deseja confirmar o empréstimo? (S/N)");
+    if (op === 2) {
+        let valor = lerTeclado.questionFloat("Valor empréstimo: ");
+        let taxa = 3; // 3% de taxa de juros
+        let parcelas = lerTeclado.questionInt("Número de parcelas desejadas(max. 48): ");
+        let renda = lerTeclado.questionInt("Informe sua renda mensal: ")
 
-    let confirmacao = lerTeclado.question().toUpperCase();
+        if (valor <= 0) {
+            console.log("Valor inválido.");
+            return menuConta(conta);
+        }
+        // 2. Limitar valor máximo de empréstimo
+        let limiteMaximo = renda * 0.3
 
-    if (confirmacao === "S") {
-        console.log(`Empréstimo de R$ ${valor.toFixed(2)} aprovado!`);
-        conta.saldo += valor;
-        menuConta(conta);
+        // ================= VALIDAÇÕES CONSIGNADO =================
+        if (valor > limiteMaximo) {
+            console.log(`Você pode solicitar até R$ ${limiteMaximo.toFixed(2)}.`);
+            return menuConta(conta);
+        }
+        // 3. Limitar número de parcelas
+        if (parcelas < 1 || parcelas > 48) {
+            console.log("Número de parcelas inválido (1 a 48).");
+            return menuConta(conta);
+        }
 
-    } else {
-        console.log("Empréstimo cancelado.");
-        menuConta(conta); 
+        let valorParcela = (valor + (valor * taxa / 100 * parcelas)) / parcelas;
+
+        // ================= SE PASSOU NAS REGRAS =================
+        console.log(`Total a pagar: R$ ${(valor + (valor * taxa / 100 * parcelas)).toFixed(2)}`);
+        console.log("Deseja confirmar o empréstimo? (S/N)");
+
+        let confirmacao = lerTeclado.question().toUpperCase();
+
+        if (confirmacao === "S") {
+            console.log(`Emprestimo de R$ ${valor.toFixed(2)} aprovado!`);
+            conta.saldo += valor;
+            menuConta(conta);
+
+        } else {
+            console.log("Emprestimo cancelado.");
+            menuConta(conta);
+        }
     }
-}
 
     else if (op === 3) {
-        let valor = lerTeclado.questionFloat("Simular empréstimo - Valor: ");
-        let taxa = 12; // 12% de taxa de juros
-        let parcelas = lerTeclado.questionInt("Número de parcelas desejadas: ");
+        let valor = lerTeclado.questionFloat("Simular emprestimo - Valor: ");
+        let taxa = lerTeclado.questionFloat("Informe a taxa de juros: ")
+        let parcelas = lerTeclado.questionInt("Número de parcelas desejadas(min. 1, max. 48): ");
+
         let total = valor + (valor * taxa / 100 * parcelas);
+
         console.log(`Total a pagar simulação: R$ ${total.toFixed(2)}`);
         console.log(`O valor de cada parcela será de R$ ${(total / parcelas).toFixed(2)}`);
         console.log(`Fazer simulação de novo? (S/N)`);
