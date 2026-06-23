@@ -384,7 +384,7 @@ function menuInvestimentos(conta) {
 }
 
 function investimentos(conta, tipo) {
-    let valor = lerTeclado.questionFloat("Valor investir: ");
+    let valor = lerTeclado.questionFloat("Valor a investir: ");
 
     if (valor > conta.saldo) {
         console.log("Saldo insuficiente");
@@ -410,6 +410,28 @@ function consultarInvestimentos(conta) {
 function calcularRendimento(valor, tipo) {
     if (tipo === "fixa") return valor * 0.02;
     return valor * (Math.random() * 0.1);
+}
+
+function resgatarInvestimentos(conta) {
+    if (conta.investimentos <= 0) {
+        console.log("Você não possui investimentos para resgatar.");
+        return menuInvestimentos(conta);
+    }
+
+    let valor = lerTeclado.questionFloat("Valor a resgatar: ");
+
+    if (valor > conta.investimentos) {
+        console.log("Valor maior que o total investido.");
+        return menuInvestimentos(conta);
+    }
+
+    conta.investimentos -= valor;
+
+    conta.saldo += valor;
+
+    console.log(`Resgate realizado com sucesso! R$ ${valor.toFixed(2)} creditado na conta.`);
+
+    menuConta(conta);
 }
 
 // ================= RECARGA =================
