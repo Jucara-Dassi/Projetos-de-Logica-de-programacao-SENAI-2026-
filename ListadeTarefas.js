@@ -207,7 +207,7 @@ function mostrarMenu() {
     while (opcao !== 7) {
         console.log("\n=== MENU ===");
         console.log("1 - Adicionar tarefa");
-        console.log("2 - Visualizar lista");6
+        console.log("2 - Visualizar lista");
         console.log("3 - Visualizar tarefa");
         console.log("4 - Editar tarefa");
         console.log("5 - Excluir tarefa");
@@ -230,21 +230,42 @@ function mostrarMenu() {
 }
 
 // Função para adicionar tarefa - C1/C3/C7/C8 - PASSO 2
-function adicionarTarefa() {
-    let titulo = rl.question("Informe o Titulo da tarefa: ");
-    let descricao = rl.question("Informe a Descricao da tarefa: ");
 
-    if (titulo.trim() === "" || descricao.trim() === "") {
-        console.log("Erro... O titulo e a descricao nao podem estar vazios");
-        return;
-    } else if (/^\d+$/.test(titulo.trim())) {
-        console.log("Erro: o titulo nao pode conter numeros.")
+function adicionarTarefa() {
+    let titulo;
+    let descricao;
+
+    while (true) {
+        titulo = rl.question("Informe o titulo da tarefa (ou digite 'cancelar' para sair): ");
+        if (titulo.toLowerCase() === "cancelar") {
+            console.log("Operacao cancelada pelo usuario.");
+            return;
+        }
+
+        descricao = rl.question("Informe a descricao da tarefa (ou digite 'cancelar' para sair): ");
+        if (descricao.toLowerCase() === "cancelar") {
+            console.log("Operacao cancelada pelo usuario.");
+            return;
+        }
+
+        // Verificações
+        if (titulo.trim() === "" || descricao.trim() === "") {
+            console.log("Erro... O titulo e a descricao nao podem estar vazios.");
+            continue;
+        } else if (/[\d]/.test(titulo.trim()) || /[\d]/.test(descricao.trim())) {
+            console.log("Erro... O titulo e descricao nao podem conter numeros.");
+            continue;
+        } else if (!/^[A-Za-zÀ-ÿ\s]+$/.test(titulo.trim()) || !/^[A-Za-zÀ-ÿ\s]+$/.test(descricao.trim())) {
+            console.log("Erro: titulo e descricao devem conter apenas letras e espacos.");
+            continue;
+        }
+
+        break; // Sai do loop se tudo estiver válido
     }
 
     tarefas.push({ titulo: titulo, descricao: descricao });
-    console.log("Tarefa adicionada com sucesso");
+    console.log("Tarefa adicionada com sucesso!");
 }
-
 
 // Função para visualizar lista - C1/C3/C7 - PASSO 3
 function visualizarLista() {
